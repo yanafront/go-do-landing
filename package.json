@@ -1,7 +1,6 @@
 {
   "name": "godo-landing",
   "version": "1.0.0",
-  "type": "module",
   "license": "MIT",
   "description": "GoDo - платформа для быстрого заработка и поиска исполнителей в Telegram",
   "scripts": {
