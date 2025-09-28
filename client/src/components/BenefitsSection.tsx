@@ -27,12 +27,12 @@ export default function BenefitsSection() {
 
   return (
     <section className="py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
             Почему это удобно
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Мы убрали всё лишнее и оставили только то, что действительно важно для быстрой работы.
           </p>
         </div>
@@ -48,10 +48,10 @@ export default function BenefitsSection() {
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
                   </div>
-                  <h3 className="font-semibold text-card-foreground mb-2">
+                  <h3 className="text-sm sm:text-base font-semibold text-card-foreground mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     {benefit.description}
                   </p>
                 </CardContent>

@@ -16,7 +16,7 @@ export default function HeroSection() {
       <div className="absolute bottom-1/3 right-10 w-36 h-36 bg-blue-300/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '8s' }}></div>
 
       {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 text-center py-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="text-4xl md:text-6xl font-black mb-8 leading-tight"
+              className="text-3xl sm:text-4xl md:text-6xl font-black mb-8 leading-tight px-4 sm:px-0"
             >
             <span className="text-white drop-shadow-2xl">Зарабатывай </span>
             <span className="bg-gradient-to-r from-blue-200 via-blue-100 to-blue-300 bg-clip-text text-transparent drop-shadow-2xl">сегодня</span>
@@ -48,7 +48,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6 }}
-              className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto font-medium"
+              className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto font-medium px-4 sm:px-0"
             >
             Находи работу за минуты или найми исполнителя за секунды
           </motion.p>
@@ -62,7 +62,7 @@ export default function HeroSection() {
           >
             <Button
               size="lg"
-              className="bg-white text-blue-700 hover:bg-blue-50 font-bold py-6 px-12 rounded-2xl text-xl group relative overflow-hidden shadow-2xl hover:shadow-blue-500/25 transform hover:scale-110 transition-all duration-300 border-0"
+              className="bg-white text-blue-700 hover:bg-blue-50 font-bold py-4 px-8 sm:py-6 sm:px-12 rounded-2xl text-lg sm:text-xl group relative overflow-hidden shadow-2xl hover:shadow-blue-500/25 transform hover:scale-110 transition-all duration-300 border-0"
               data-testid="button-find-work"
               onClick={() => setLocation('/workers')}
             >
@@ -74,7 +74,7 @@ export default function HeroSection() {
 
             <Button
               size="lg"
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-6 px-12 rounded-2xl text-xl group relative overflow-hidden shadow-2xl hover:shadow-blue-500/25 transform hover:scale-110 transition-all duration-300 border-0"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 sm:py-6 sm:px-12 rounded-2xl text-lg sm:text-xl group relative overflow-hidden shadow-2xl hover:shadow-blue-500/25 transform hover:scale-110 transition-all duration-300 border-0"
               data-testid="button-find-worker"
               onClick={() => setLocation('/employers')}
             >
@@ -93,16 +93,16 @@ export default function HeroSection() {
             className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12"
           >
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">5 мин</div>
-              <div className="text-white/80 text-lg">до первого заказа</div>
+              <div className="text-3xl sm:text-4xl font-bold text-white mb-2 drop-shadow-lg">5 мин</div>
+              <div className="text-white/80 text-base sm:text-lg">до первого заказа</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">1000+</div>
-              <div className="text-white/80 text-lg">активных исполнителей</div>
+              <div className="text-3xl sm:text-4xl font-bold text-white mb-2 drop-shadow-lg">1000+</div>
+              <div className="text-white/80 text-base sm:text-lg">активных исполнителей</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">24/7</div>
-              <div className="text-white/80 text-lg">работает в Telegram</div>
+              <div className="text-3xl sm:text-4xl font-bold text-white mb-2 drop-shadow-lg">24/7</div>
+              <div className="text-white/80 text-base sm:text-lg">работает в Telegram</div>
             </div>
           </motion.div>
 
@@ -111,19 +111,19 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.2 }}
-            className="flex items-center justify-center space-x-8 text-white/80"
+            className="hidden sm:flex sm:flex-row items-center justify-center space-x-8 text-white/80"
           >
             <div className="flex items-center space-x-2">
               <Smartphone className="w-6 h-6" />
-              <span className="text-lg font-medium">В Telegram</span>
+                <span className="text-base sm:text-lg font-medium">В Telegram</span>
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-6 h-6" />
-              <span className="text-lg font-medium">Безопасно</span>
+              <span className="text-base sm:text-lg font-medium">Безопасно</span>
             </div>
             <div className="flex items-center space-x-2">
               <Zap className="w-6 h-6" />
-              <span className="text-lg font-medium">Мгновенно</span>
+              <span className="text-base sm:text-lg font-medium">Мгновенно</span>
             </div>
           </motion.div>
         </motion.div>

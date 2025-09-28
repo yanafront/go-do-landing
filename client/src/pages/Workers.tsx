@@ -20,7 +20,7 @@ export default function Workers() {
         <div className="absolute bottom-1/3 right-10 w-36 h-36 bg-blue-300/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '8s' }}></div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 text-center py-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function Workers() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="text-4xl md:text-6xl font-black mb-8 leading-tight"
+              className="text-3xl sm:text-4xl md:text-6xl font-black mb-8 leading-tight px-4 sm:px-0"
             >
               <span className="text-white drop-shadow-2xl">Зарабатывай </span>
               <span className="bg-gradient-to-r from-blue-200 via-blue-100 to-blue-300 bg-clip-text text-transparent drop-shadow-2xl">сегодня</span>
@@ -52,7 +52,7 @@ export default function Workers() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6 }}
-              className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto font-medium"
+              className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto font-medium px-4 sm:px-0"
             >
               Находи работу за минуты, выполняй задачи и получай деньги сразу
             </motion.p>
@@ -66,7 +66,7 @@ export default function Workers() {
             >
               <Button
                 size="lg"
-                className="bg-white text-blue-700 hover:bg-blue-50 font-bold py-6 px-12 rounded-2xl text-xl group relative overflow-hidden shadow-2xl hover:shadow-blue-500/25 transform hover:scale-110 transition-all duration-300 border-0"
+                className="bg-white text-blue-700 hover:bg-blue-50 font-bold py-4 px-8 sm:py-6 sm:px-12 rounded-2xl text-lg sm:text-xl group relative overflow-hidden shadow-2xl hover:shadow-blue-500/25 transform hover:scale-110 transition-all duration-300 border-0"
                 onClick={() => window.open('https://t.me/proxiDBot', '_blank')}
               >
                 <span className="relative z-10 flex items-center">
@@ -102,7 +102,7 @@ export default function Workers() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.2 }}
-              className="flex items-center justify-center space-x-8 text-white/80"
+              className="hidden sm:flex sm:flex-row items-center justify-center space-x-8 text-white/80"
             >
               <div className="flex items-center space-x-2">
                 <Smartphone className="w-6 h-6" />
@@ -123,12 +123,12 @@ export default function Workers() {
 
       {/* How it works section */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-6">
               Как это работает
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Простой процесс от регистрации до получения денег
             </p>
           </div>
@@ -187,12 +187,12 @@ export default function Workers() {
 
       {/* Benefits section */}
       <section className="py-24 bg-gradient-to-br from-blue-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-6">
               Почему выбирают нас
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Все преимущества для быстрого и удобного заработка
             </p>
           </div>
