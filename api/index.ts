@@ -1,11 +1,12 @@
 import express, { type Request, Response, NextFunction } from "express";
-import { registerRoutes } from "../server/routes";
-import { setupVite, serveStatic, log } from "../server/vite";
+import path from "path";
+import fs from "fs";
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Logging middleware
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
@@ -29,27 +30,56 @@ app.use((req, res, next) => {
         logLine = logLine.slice(0, 79) + "…";
       }
 
-      log(logLine);
+      console.log(logLine);
     }
   });
 
   next();
 });
 
-// Register API routes
-app.use("/api", registerRoutes());
+// API routes
+app.get("/api/health", (req: Request, res: Response) => {
+  res.json({ status: "ok", timestamp: new Date().toISOString() });
+});
 
-// Setup Vite for development
-if (process.env.NODE_ENV === "development") {
-  setupVite(app);
+// Serve static files in production
+if (process.env.NODE_ENV === "production") {
+  const distPath = path.resolve(process.cwd(), "dist");
+  
+  if (fs.existsSync(distPath)) {
+    app.use(express.static(distPath));
+    
+    // Serve index.html for all routes (SPA)
+    app.get("*", (req: Request, res: Response) => {
+      const indexPath = path.resolve(distPath, "index.html");
+      if (fs.existsSync(indexPath)) {
+        res.sendFile(indexPath);
+      } else {
+        res.status(404).json({ error: "Build files not found" });
+      }
+    });
+  } else {
+    // Fallback if dist doesn't exist
+    app.get("*", (req: Request, res: Response) => {
+      res.status(503).json({ 
+        error: "Application not built", 
+        message: "Please run 'npm run build' first" 
+      });
+    });
+  }
 } else {
-  // Serve static files in production
-  serveStatic(app);
+  // Development mode - serve a simple message
+  app.get("*", (req: Request, res: Response) => {
+    res.json({ 
+      message: "Development mode - please run 'npm run dev' locally",
+      path: req.path 
+    });
+  });
 }
 
 // Error handling middleware
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-  log(`Error: ${err.message}`);
+  console.error(`Error: ${err.message}`);
   res.status(500).json({ error: "Internal Server Error" });
 });
 
