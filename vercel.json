@@ -2,8 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/app.ts",
-      "use": "@vercel/node"
+      "src": "dist/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -13,15 +13,10 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/api/app.ts"
+      "dest": "/dist/index.html"
     }
   ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "functions": {
-    "api/app.ts": {
-      "maxDuration": 30
-    }
   }
 }
