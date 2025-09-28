@@ -4,32 +4,54 @@ const app = express();
 
 app.use(express.json());
 
+// Health check
 app.get("/api/health", (req, res) => {
-  res.json({ status: "ok" });
+  console.log("Health check requested");
+  res.json({ 
+    status: "ok", 
+    timestamp: new Date().toISOString(),
+    message: "GoDo API is running"
+  });
 });
 
-if (process.env.NODE_ENV === "production") {
-  const path = require("path");
-  const fs = require("fs");
+// Main handler
+app.get("*", (req, res) => {
+  console.log("Request received:", req.path);
   
-  const distPath = path.resolve(process.cwd(), "dist");
-  
-  if (fs.existsSync(distPath)) {
-    app.use(express.static(distPath));
+  if (process.env.NODE_ENV === "production") {
+    const path = require("path");
+    const fs = require("fs");
     
-    app.get("*", (req, res) => {
+    const distPath = path.resolve(process.cwd(), "dist");
+    console.log("Dist path:", distPath);
+    console.log("Dist exists:", fs.existsSync(distPath));
+    
+    if (fs.existsSync(distPath)) {
       const indexPath = path.resolve(distPath, "index.html");
-      res.sendFile(indexPath);
-    });
+      console.log("Index path:", indexPath);
+      console.log("Index exists:", fs.existsSync(indexPath));
+      
+      if (fs.existsSync(indexPath)) {
+        res.sendFile(indexPath);
+      } else {
+        res.status(404).json({ error: "index.html not found" });
+      }
+    } else {
+      res.status(503).json({ error: "dist folder not found" });
+    }
   } else {
-    app.get("*", (req, res) => {
-      res.status(503).json({ error: "Not built" });
+    res.json({ 
+      message: "Development mode", 
+      path: req.path,
+      env: process.env.NODE_ENV 
     });
   }
-} else {
-  app.get("*", (req, res) => {
-    res.json({ message: "Dev mode" });
-  });
-}
+});
+
+// Error handler
+app.use((err, req, res, next) => {
+  console.error("Error:", err);
+  res.status(500).json({ error: "Internal Server Error", details: err.message });
+});
 
 export default app;
