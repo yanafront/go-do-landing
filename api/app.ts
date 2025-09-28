@@ -4,12 +4,10 @@ const app = express();
 
 app.use(express.json());
 
-// Health check
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok" });
 });
 
-// Serve static files
 if (process.env.NODE_ENV === "production") {
   const path = require("path");
   const fs = require("fs");
