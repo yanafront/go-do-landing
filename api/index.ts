@@ -2,19 +2,14 @@ import express from "express";
 
 const app = express();
 
-// Middleware
 app.use(express.json());
 
-// Health check endpoint
+// Health check
 app.get("/api/health", (req, res) => {
-  res.json({ 
-    status: "ok", 
-    timestamp: new Date().toISOString(),
-    message: "GoDo API is running"
-  });
+  res.json({ status: "ok" });
 });
 
-// Serve static files in production
+// Serve static files
 if (process.env.NODE_ENV === "production") {
   const path = require("path");
   const fs = require("fs");
@@ -24,37 +19,19 @@ if (process.env.NODE_ENV === "production") {
   if (fs.existsSync(distPath)) {
     app.use(express.static(distPath));
     
-    // SPA fallback - serve index.html for all routes
     app.get("*", (req, res) => {
       const indexPath = path.resolve(distPath, "index.html");
-      if (fs.existsSync(indexPath)) {
-        res.sendFile(indexPath);
-      } else {
-        res.status(404).json({ error: "Build files not found" });
-      }
+      res.sendFile(indexPath);
     });
   } else {
     app.get("*", (req, res) => {
-      res.status(503).json({ 
-        error: "Application not built", 
-        message: "Please run 'npm run build' first" 
-      });
+      res.status(503).json({ error: "Not built" });
     });
   }
 } else {
-  // Development mode
   app.get("*", (req, res) => {
-    res.json({ 
-      message: "Development mode - please run 'npm run dev' locally",
-      path: req.path 
-    });
+    res.json({ message: "Dev mode" });
   });
 }
-
-// Error handler
-app.use((err, req, res, next) => {
-  console.error("Error:", err.message);
-  res.status(500).json({ error: "Internal Server Error" });
-});
 
 export default app;
