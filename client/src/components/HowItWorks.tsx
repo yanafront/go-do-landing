@@ -21,14 +21,14 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="py-24 bg-[#0C0A25] relative overflow-hidden">
+    <section className="py-24 bg-[#0C0A25] relative overflow-hidden" aria-labelledby="how-it-works-heading">
       <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
       <div className="absolute top-10 left-10 w-36 h-36 bg-[#FF4FC3]/10 rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#3A7BFF]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 id="how-it-works-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             Как это работает
           </h2>
           <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto">

@@ -1,13 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    
+    <!-- Primary Meta Tags -->
+    <title>GoDo - Работа и исполнители за пару кликов в Telegram</title>
+    <meta name="title" content="GoDo - Работа и исполнители за пару кликов в Telegram" />
+    <meta name="description" content="Быстро найди работу или исполнителя в Telegram. Зарабатывай сегодня или найди работника прямо сейчас. Без резюме и лишних документов. Персонализированный подбор вакансий голосом или текстом." />
+    <meta name="keywords" content="работа, вакансии, поиск работы, исполнители, фриланс, Telegram бот, работа в Telegram, быстрый заработок, персонализированный подбор вакансий, работа голосом" />
+    <meta name="author" content="GoDo" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="language" content="Russian" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://godo.job/" />
+    <meta property="og:title" content="GoDo - Работа и исполнители за пару кликов в Telegram" />
+    <meta property="og:description" content="Быстро найди работу или исполнителя в Telegram. Зарабатывай сегодня или найди работника прямо сейчас. Без резюме и лишних документов." />
+    <meta property="og:image" content="https://godo.job/og-image.jpg" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="GoDo" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://godo.job/" />
+    <meta property="twitter:title" content="GoDo - Работа и исполнители за пару кликов в Telegram" />
+    <meta property="twitter:description" content="Быстро найди работу или исполнителя в Telegram. Зарабатывай сегодня или найди работника прямо сейчас." />
+    <meta property="twitter:image" content="https://godo.job/og-image.jpg" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://godo.job/" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <title>GoDo - Работа и исполнители за пару кликов в Telegram</title>
-    <meta name="description" content="Быстро найди работу или исполнителя в Telegram. Зарабатывай сегодня или найди работника прямо сейчас. Без резюме и лишних документов." />
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "GoDo",
+      "url": "https://godo.job",
+      "logo": "https://godo.job/logo.png",
+      "description": "Платформа для быстрого поиска работы и исполнителей в Telegram",
+      "sameAs": [
+        "https://t.me/go_do_job_bot"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "availableLanguage": "Russian"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "GoDo",
+      "url": "https://godo.job",
+      "description": "Быстро найди работу или исполнителя в Telegram",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://godo.job/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "GoDo Bot",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Telegram",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "RUB"
+      },
+      "description": "Умный бот для поиска работы в Telegram. Скажи город и навыки голосом или текстом — получи персонализированные вакансии."
+    }
+    </script>
     
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -16,15 +97,15 @@
             m[i].l=1*new Date();
             for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
             k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104309766', 'ym');
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105259180', 'ym');
 
-        ym(104309766, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+        ym(105259180, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
     </script>
     <!-- /Yandex.Metrika counter -->
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <noscript><img src="https://mc.yandex.ru/watch/104309766" style="position:absolute; left:-9999px;" alt="" /></noscript>
+    <noscript><div><img src="https://mc.yandex.ru/watch/105259180" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   </body>
 </html>

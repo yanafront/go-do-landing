@@ -26,14 +26,14 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="py-24 bg-[#0C0A25] relative overflow-hidden">
+    <section className="py-24 bg-[#0C0A25] relative overflow-hidden" aria-labelledby="benefits-heading">
       <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
       <div className="absolute top-20 right-20 w-40 h-40 bg-[#FF4FC3]/10 rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-20 left-20 w-32 h-32 bg-[#3A7BFF]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 id="benefits-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             Почему это удобно
           </h2>
           <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto">

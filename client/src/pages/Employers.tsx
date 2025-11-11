@@ -71,7 +71,7 @@ export default function Employers() {
               <Button
                 size="lg"
                 className="bg-[#6B4BFF] hover:bg-[#3A7BFF] text-white font-bold py-4 px-8 sm:py-6 sm:px-12 rounded-2xl text-lg sm:text-xl group relative overflow-hidden shadow-2xl hover:shadow-[#3A7BFF]/25 transform hover:scale-110 transition-all duration-300 border-0"
-                onClick={() => window.open('https://t.me/go_do_job_bot', '_blank')}
+                onClick={() => window.open('https://t.me/go_do_minsk', '_blank')}
               >
                 <span className="relative z-10 flex items-center">
                   👥 Разместить вакансию в боте

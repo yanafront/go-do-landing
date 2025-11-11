@@ -2,12 +2,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Zap, CheckCircle, Smartphone } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLocation } from 'wouter';
+import logoImage from "@/components/img/logo.png";
 
 export default function HeroSection() {
   const [, setLocation] = useLocation();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0C0A25] pt-16">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0C0A25] pt-16" aria-label="Главная секция">
       <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
       {/* Floating elements */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-[#6B4BFF]/20 rounded-full blur-3xl animate-float"></div>
@@ -43,6 +44,22 @@ export default function HeroSection() {
             <span className="text-white drop-shadow-2xl">Найди работу </span>
             <span className="bg-gradient-to-r from-white via-white/90 to-white/80 bg-clip-text text-transparent drop-shadow-2xl">быстро и легко</span>
           </motion.h1>
+
+          {/* Hero Image */}
+          <motion.div
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="relative z-10 flex justify-center"
+          >
+            <div className="relative">
+              <img
+                  src={logoImage}
+                  alt="GoDo Logo"
+                  className="w-auto h-auto max-w-[300px] sm:max-w-[400px] md:max-w-[300px] brightness-110 contrast-110 saturate-110 drop-shadow-2xl"
+              />
+            </div>
+          </motion.div>
 
           {/* Subheading */}
             <motion.p
