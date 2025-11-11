@@ -14,12 +14,12 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-blue-200/30 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#6B4BFF]/20 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <span className="font-black text-3xl bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">GoDo</span>
+            <span className="font-black text-3xl bg-gradient-to-r from-[#6B4BFF] to-[#3A7BFF] bg-clip-text text-transparent">GoDo</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -28,8 +28,8 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-semibold transition-colors hover:text-blue-600 ${
-                  location === item.href ? 'text-blue-600' : 'text-gray-700'
+                className={`text-sm font-semibold transition-colors hover:text-[#FF4FC3] ${
+                  location === item.href ? 'text-[#6B4BFF]' : 'text-[#1A1A2E]'
                 }`}
                 data-testid={`link-nav-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
               >
@@ -38,9 +38,9 @@ export default function Navigation() {
             ))}
             <Button
               size="sm"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-2 rounded-xl shadow-lg hover:shadow-blue-600/25 transform hover:scale-105 transition-all duration-300 border-0"
+              className="bg-[#6B4BFF] hover:bg-[#3A7BFF] text-white font-bold px-6 py-2 rounded-xl shadow-lg hover:shadow-[#3A7BFF]/25 transform hover:scale-105 transition-all duration-300 border-0"
               data-testid="button-start-telegram"
-              onClick={() => window.open('https://t.me/proxiDBot', '_blank')}
+              onClick={() => window.open('https://t.me/go_do_job_bot', '_blank')}
             >
               Перейти в бот
             </Button>
@@ -53,7 +53,7 @@ export default function Navigation() {
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               data-testid="button-mobile-menu"
-              className="text-gray-700 hover:text-blue-600"
+              className="text-[#1A1A2E] hover:text-[#FF4FC3]"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -73,18 +73,18 @@ export default function Navigation() {
             <div className="fixed top-0 left-0 h-screen w-80 max-w-[85vw] bg-white shadow-2xl z-50 md:hidden transform transition-transform duration-300 ease-in-out">
               <div className="flex flex-col h-full">
                 {/* Header */}
-                <div className="flex items-center justify-between p-6 border-b border-blue-200/30">
+                <div className="flex items-center justify-between p-6 border-b border-[#6B4BFF]/20">
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
+                    <div className="w-10 h-10 bg-gradient-to-r from-[#6B4BFF] to-[#3A7BFF] rounded-xl flex items-center justify-center shadow-lg">
                       <MessageCircle className="w-6 h-6 text-white" />
                     </div>
-                    <span className="font-black text-2xl bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">GoDo</span>
+                    <span className="font-black text-2xl bg-gradient-to-r from-[#6B4BFF] to-[#3A7BFF] bg-clip-text text-transparent">GoDo</span>
                   </div>
                   <Button
                     variant="ghost"
                     size="icon"
                     onClick={() => setIsMenuOpen(false)}
-                    className="text-gray-700 hover:text-blue-600"
+                    className="text-[#1A1A2E] hover:text-[#FF4FC3]"
                   >
                     <X className="h-6 w-6" />
                   </Button>
@@ -96,10 +96,10 @@ export default function Navigation() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className={`block px-4 py-4 text-lg font-semibold rounded-xl transition-all duration-200 hover:bg-blue-50 ${
+                      className={`block px-4 py-4 text-lg font-semibold rounded-xl transition-all duration-200 hover:bg-[#FF4FC3]/10 ${
                         location === item.href 
-                          ? 'text-blue-600 bg-blue-50' 
-                          : 'text-gray-700 hover:text-blue-600'
+                          ? 'text-[#6B4BFF] bg-[#6B4BFF]/10' 
+                          : 'text-[#1A1A2E] hover:text-[#FF4FC3]'
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                       data-testid={`link-mobile-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
@@ -110,13 +110,13 @@ export default function Navigation() {
                 </div>
 
                 {/* CTA Button */}
-                <div className="p-6 border-t border-blue-200/30">
+                <div className="p-6 border-t border-[#6B4BFF]/20">
                   <Button
                     size="lg"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg border-0 text-lg"
+                    className="w-full bg-[#6B4BFF] hover:bg-[#3A7BFF] text-white font-bold py-4 rounded-xl shadow-lg border-0 text-lg"
                     data-testid="button-mobile-telegram"
                     onClick={() => {
-                      window.open('https://t.me/proxiDBot', '_blank');
+                      window.open('https://t.me/go_do_job_bot', '_blank');
                       setIsMenuOpen(false);
                     }}
                   >

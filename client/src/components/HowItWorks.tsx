@@ -5,23 +5,23 @@ export default function HowItWorks() {
   const steps = [
     {
       icon: UserPlus,
-      title: "Создай профиль или задание",
-      description: "Опиши свои навыки или задачу в несколько кликов. Никаких длинных анкет и резюме."
+      title: "Скажи боту город и навыки",
+      description: "Голосовым сообщением или текстом укажи город и что умеешь или ищешь. Бот задаст уточняющие вопросы для лучшего подбора."
     },
     {
       icon: MessageSquare,
-      title: "Получай отклики",
-      description: "Мы сами найдём подходящих людей и отправим уведомления. Первые отклики за пару минут."
+      title: "Получай персонализированные вакансии",
+      description: "Бот пришлёт только те вакансии, которые тебе подходят. Все вакансии собраны в одном канале — больше не нужно искать по разным пабликам."
     },
     {
       icon: CheckCircle,
-      title: "Работай или нанимай",
-      description: "Выбирай лучший вариант и приступай к работе. Оплата в тот же день."
+      title: "Быстрое трудоустройство",
+      description: "Фокус на быстром найме. Полная или частичная занятость — выбирай что удобно. Начинай работать уже сегодня."
     }
   ];
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-24 bg-[#F5F7FF]">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -40,8 +40,8 @@ export default function HowItWorks() {
                 <CardContent className="p-8">
                   {/* Icon */}
                   <div className="flex justify-center mb-6">
-                    <div className="w-16 h-16 bg-chart-2/10 rounded-full flex items-center justify-center">
-                      <Icon className="w-8 h-8 text-chart-2" />
+                    <div className="w-16 h-16 bg-[#6B4BFF]/10 rounded-full flex items-center justify-center">
+                      <Icon className="w-8 h-8 text-[#6B4BFF]" />
                     </div>
                   </div>
 
@@ -61,12 +61,12 @@ export default function HowItWorks() {
         {/* Arrow indicators between steps on desktop */}
         <div className="hidden md:flex justify-center items-center mt-12 space-x-8">
           <div className="flex items-center space-x-4">
-            <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-chart-2" />
-            <div className="w-2 h-2 bg-chart-2 rounded-full" />
+            <div className="w-12 h-0.5 bg-gradient-to-r from-[#6B4BFF] to-[#3A7BFF]" />
+            <div className="w-2 h-2 bg-[#3A7BFF] rounded-full" />
           </div>
           <div className="flex items-center space-x-4">
-            <div className="w-12 h-0.5 bg-gradient-to-r from-chart-2 to-chart-3" />
-            <div className="w-2 h-2 bg-chart-3 rounded-full" />
+            <div className="w-12 h-0.5 bg-gradient-to-r from-[#3A7BFF] to-[#FF4FC3]" />
+            <div className="w-2 h-2 bg-[#FF4FC3] rounded-full" />
           </div>
         </div>
       </div>

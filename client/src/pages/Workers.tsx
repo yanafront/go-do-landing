@@ -7,17 +7,17 @@ import { motion } from "framer-motion";
 
 export default function Workers() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100">
+    <div className="min-h-screen bg-[#F5F7FF]">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 pt-16">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-tr from-[#6B4BFF] to-[#3A7BFF] pt-16">
         {/* Floating elements */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-blue-400/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute top-40 right-20 w-48 h-48 bg-blue-300/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
-        <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-blue-400/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '6s' }}></div>
-        <div className="absolute bottom-1/3 right-10 w-36 h-36 bg-blue-300/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '8s' }}></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-[#6B4BFF]/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute top-40 right-20 w-48 h-48 bg-[#3A7BFF]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-[#6B4BFF]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-[#FF4FC3]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '6s' }}></div>
+        <div className="absolute bottom-1/3 right-10 w-36 h-36 bg-[#3A7BFF]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '8s' }}></div>
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 text-center py-8">
@@ -33,7 +33,7 @@ export default function Workers() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="inline-flex items-center bg-white/20 backdrop-blur-md text-white px-6 py-3 rounded-full text-sm font-semibold mb-8 border border-white/30"
             >
-              #1 Платформа для быстрого заработка
+              🤖 Умный бот для поиска работы
             </motion.div>
 
             {/* Main heading */}
@@ -43,8 +43,8 @@ export default function Workers() {
               transition={{ duration: 1, delay: 0.4 }}
               className="text-3xl sm:text-4xl md:text-6xl font-black mb-8 leading-tight px-4 sm:px-0"
             >
-              <span className="text-white drop-shadow-2xl">Зарабатывай </span>
-              <span className="bg-gradient-to-r from-blue-200 via-blue-100 to-blue-300 bg-clip-text text-transparent drop-shadow-2xl">сегодня</span>
+              <span className="text-white drop-shadow-2xl">Найди работу </span>
+              <span className="bg-gradient-to-r from-white via-white/90 to-white/80 bg-clip-text text-transparent drop-shadow-2xl">быстро и легко</span>
             </motion.h1>
 
             {/* Subheading */}
@@ -54,7 +54,7 @@ export default function Workers() {
               transition={{ duration: 1, delay: 0.6 }}
               className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto font-medium px-4 sm:px-0"
             >
-              Находи работу за минуты, выполняй задачи и получай деньги сразу
+              Скажи боту город и свои навыки голосом или текстом. Он задаст уточняющие вопросы и пришлёт только подходящие вакансии. Все вакансии в одном канале — больше не нужно искать по разным Telegram-пабликам.
             </motion.p>
 
             {/* CTA Button */}
@@ -66,11 +66,11 @@ export default function Workers() {
             >
               <Button
                 size="lg"
-                className="bg-white text-blue-700 hover:bg-blue-50 font-bold py-4 px-8 sm:py-6 sm:px-12 rounded-2xl text-lg sm:text-xl group relative overflow-hidden shadow-2xl hover:shadow-blue-500/25 transform hover:scale-110 transition-all duration-300 border-0"
-                onClick={() => window.open('https://t.me/proxiDBot', '_blank')}
+                className="bg-[#6B4BFF] hover:bg-[#3A7BFF] text-white font-bold py-4 px-8 sm:py-6 sm:px-12 rounded-2xl text-lg sm:text-xl group relative overflow-hidden shadow-2xl hover:shadow-[#3A7BFF]/25 transform hover:scale-110 transition-all duration-300 border-0"
+                onClick={() => window.open('https://t.me/go_do_job_bot', '_blank')}
               >
                 <span className="relative z-10 flex items-center">
-                  💰 Начать зарабатывать
+                  💼 Открыть бота в Telegram
                   <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
                 </span>
               </Button>
@@ -84,16 +84,16 @@ export default function Workers() {
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12"
             >
               <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">5 мин</div>
-                <div className="text-white/80 text-lg">до первого заказа</div>
+                <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">1 мин</div>
+                <div className="text-white/80 text-lg">до первых вакансий</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">1000+</div>
-                <div className="text-white/80 text-lg">активных исполнителей</div>
+                <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">Персонализация</div>
+                <div className="text-white/80 text-lg">только подходящие</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">24/7</div>
-                <div className="text-white/80 text-lg">работает в Telegram</div>
+                <div className="text-white/80 text-lg">в Telegram</div>
               </div>
             </motion.div>
 
@@ -125,10 +125,10 @@ export default function Workers() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#1A1A2E] mb-6">
               Как это работает
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-[#1A1A2E]/70 max-w-3xl mx-auto">
               Простой процесс от регистрации до получения денег
             </p>
           </div>
@@ -141,12 +141,12 @@ export default function Workers() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Smartphone className="w-10 h-10 text-blue-600" />
+              <div className="w-20 h-20 bg-[#6B4BFF]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Smartphone className="w-10 h-10 text-[#6B4BFF]" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">1. Подключись к боту</h3>
-              <p className="text-gray-600 text-lg">
-                Создай профиль в Telegram боте за 2 минуты. Никаких сложных форм!
+              <h3 className="text-2xl font-bold text-[#1A1A2E] mb-4">1. Скажи боту город и навыки</h3>
+              <p className="text-[#1A1A2E]/70 text-lg">
+                Голосовым сообщением или текстом укажи город и что умеешь или ищешь. Бот задаст уточняющие вопросы для лучшего подбора.
               </p>
             </motion.div>
 
@@ -157,12 +157,12 @@ export default function Workers() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-10 h-10 text-blue-600" />
+              <div className="w-20 h-20 bg-[#6B4BFF]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Zap className="w-10 h-10 text-[#6B4BFF]" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">2. Выбирай работу</h3>
-              <p className="text-gray-600 text-lg">
-                Получай уведомления о новых вакансиях которые тебе подходят
+              <h3 className="text-2xl font-bold text-[#1A1A2E] mb-4">2. Получай персонализированные вакансии</h3>
+              <p className="text-[#1A1A2E]/70 text-lg">
+                Бот пришлёт только те вакансии, которые тебе подходят. Все вакансии собраны в одном канале — больше не нужно искать по разным пабликам.
               </p>
             </motion.div>
 
@@ -173,12 +173,12 @@ export default function Workers() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <DollarSign className="w-10 h-10 text-blue-600" />
+              <div className="w-20 h-20 bg-[#6B4BFF]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <DollarSign className="w-10 h-10 text-[#6B4BFF]" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">3. Получай деньги</h3>
-              <p className="text-gray-600 text-lg">
-                Выполняй работу и получай оплату сразу
+              <h3 className="text-2xl font-bold text-[#1A1A2E] mb-4">3. Быстрое трудоустройство</h3>
+              <p className="text-[#1A1A2E]/70 text-lg">
+                Фокус на быстром найме. Полная или частичная занятость — выбирай что удобно. Начинай работать уже сегодня.
               </p>
             </motion.div>
           </div>
@@ -186,13 +186,13 @@ export default function Workers() {
       </section>
 
       {/* Benefits section */}
-      <section className="py-24 bg-gradient-to-br from-blue-50 to-white">
+      <section className="py-24 bg-[#F5F7FF]">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#1A1A2E] mb-6">
               Почему выбирают нас
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-[#1A1A2E]/70 max-w-3xl mx-auto">
               Все преимущества для быстрого и удобного заработка
             </p>
           </div>
@@ -203,12 +203,12 @@ export default function Workers() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-[#6B4BFF]/10"
             >
-              <Clock className="w-12 h-12 text-blue-600 mb-6" />
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Быстро</h3>
-              <p className="text-gray-600">
-                От регистрации до первого заработка всего 5 минут
+              <Clock className="w-12 h-12 text-[#6B4BFF] mb-6" />
+              <h3 className="text-xl font-bold text-[#1A1A2E] mb-4">Всё в одном месте</h3>
+              <p className="text-[#1A1A2E]/70">
+                Все вакансии собраны в одном канале. Больше не нужно искать по разным Telegram-пабликам.
               </p>
             </motion.div>
 
@@ -217,12 +217,12 @@ export default function Workers() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-[#6B4BFF]/10"
             >
-              <CheckCircle className="w-12 h-12 text-blue-600 mb-6" />
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Безопасно</h3>
-              <p className="text-gray-600">
-                Все платежи защищены, работаем только с проверенными заказчиками
+              <CheckCircle className="w-12 h-12 text-[#6B4BFF] mb-6" />
+              <h3 className="text-xl font-bold text-[#1A1A2E] mb-4">Персонализация</h3>
+              <p className="text-[#1A1A2E]/70">
+                Бот подберёт только те вакансии, которые тебе подходят. Никакого спама и лишних предложений.
               </p>
             </motion.div>
 
@@ -231,12 +231,12 @@ export default function Workers() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-[#6B4BFF]/10"
             >
-              <Users className="w-12 h-12 text-blue-600 mb-6" />
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Много заданий</h3>
-              <p className="text-gray-600">
-                Тысячи заданий каждый день - всегда есть что выбрать
+              <Users className="w-12 h-12 text-[#6B4BFF] mb-6" />
+              <h3 className="text-xl font-bold text-[#1A1A2E] mb-4">Гибкая занятость</h3>
+              <p className="text-[#1A1A2E]/70">
+                Полная или частичная занятость — выбирай что удобно. Фокус на быстром трудоустройстве.
               </p>
             </motion.div>
           </div>

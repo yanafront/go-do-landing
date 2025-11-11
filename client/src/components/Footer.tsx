@@ -3,7 +3,7 @@ import { Link } from 'wouter';
 
 export default function Footer() {
   return (
-    <footer className="bg-muted/30 border-t border-border py-12">
+    <footer className="bg-[#F5F7FF] border-t border-[#6B4BFF]/20 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -12,13 +12,16 @@ export default function Footer() {
               <span className="font-bold text-xl text-foreground">GoDo</span>
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
-              Быстрая работа и поиск исполнителей прямо в Telegram.
-              Зарабатывай сегодня или найди работника прямо сейчас.
+              Умный бот для поиска работы в Telegram. Скажи город и навыки голосом или текстом — получи персонализированные вакансии. Все вакансии в одном канале.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex flex-col space-y-2">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <MessageCircle className="w-4 h-4" />
-                <span>@godo_bot</span>
+                <MessageCircle className="w-4 h-4 text-[#32B4F2]" />
+                <a href="https://t.me/go_do_job_bot" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF4FC3] transition-colors">@go_do_job_bot</a>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <MessageCircle className="w-4 h-4 text-[#32B4F2]" />
+                <a href="https://t.me/go_do_minsk" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF4FC3] transition-colors">Канал с вакансиями</a>
               </div>
             </div>
           </div>
@@ -27,10 +30,10 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Навигация</h3>
             <div className="space-y-2">
-              <Link href="/employers" className="block text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/employers" className="block text-muted-foreground hover:text-[#FF4FC3] transition-colors">
                 Для работодателей
               </Link>
-              <Link href="/workers" className="block text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/workers" className="block text-muted-foreground hover:text-[#FF4FC3] transition-colors">
                 Для исполнителей
               </Link>
             </div>
@@ -58,10 +61,10 @@ export default function Footer() {
               © {new Date().getFullYear()} GoDo. Все права защищены.
             </p>
             <div className="flex flex-col space-y-2 md:flex-row md:space-x-6 md:space-y-0">
-              <Link href="/user-agreement" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+              <Link href="/user-agreement" className="text-muted-foreground hover:text-[#FF4FC3] text-sm transition-colors">
                 Пользовательское соглашение
               </Link>
-              <Link href="/privacy-policy" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+              <Link href="/privacy-policy" className="text-muted-foreground hover:text-[#FF4FC3] text-sm transition-colors">
                 Политика конфиденциальности
               </Link>
             </div>
