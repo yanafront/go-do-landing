@@ -11,7 +11,8 @@ export default function Workers() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-tr from-[#6B4BFF] to-[#3A7BFF] pt-16">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0C0A25] pt-16">
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
         {/* Floating elements */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-[#6B4BFF]/20 rounded-full blur-3xl animate-float"></div>
         <div className="absolute top-40 right-20 w-48 h-48 bg-[#3A7BFF]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
@@ -122,13 +123,17 @@ export default function Workers() {
       </section>
 
       {/* How it works section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <section className="py-24 bg-[#0C0A25] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
+        <div className="absolute top-10 left-10 w-36 h-36 bg-[#FF4FC3]/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#3A7BFF]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#1A1A2E] mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6">
               Как это работает
             </h2>
-            <p className="text-lg sm:text-xl text-[#1A1A2E]/70 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto">
               Простой процесс от регистрации до получения денег
             </p>
           </div>
@@ -141,11 +146,11 @@ export default function Workers() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-20 h-20 bg-[#6B4BFF]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-[#6B4BFF]/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Smartphone className="w-10 h-10 text-[#6B4BFF]" />
               </div>
-              <h3 className="text-2xl font-bold text-[#1A1A2E] mb-4">1. Скажи боту город и навыки</h3>
-              <p className="text-[#1A1A2E]/70 text-lg">
+              <h3 className="text-2xl font-bold text-white mb-4">1. Скажи боту город и навыки</h3>
+              <p className="text-white/70 text-lg">
                 Голосовым сообщением или текстом укажи город и что умеешь или ищешь. Бот задаст уточняющие вопросы для лучшего подбора.
               </p>
             </motion.div>
@@ -157,11 +162,11 @@ export default function Workers() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-20 h-20 bg-[#6B4BFF]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-[#6B4BFF]/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Zap className="w-10 h-10 text-[#6B4BFF]" />
               </div>
-              <h3 className="text-2xl font-bold text-[#1A1A2E] mb-4">2. Получай персонализированные вакансии</h3>
-              <p className="text-[#1A1A2E]/70 text-lg">
+              <h3 className="text-2xl font-bold text-white mb-4">2. Получай персонализированные вакансии</h3>
+              <p className="text-white/70 text-lg">
                 Бот пришлёт только те вакансии, которые тебе подходят. Все вакансии собраны в одном канале — больше не нужно искать по разным пабликам.
               </p>
             </motion.div>
@@ -173,11 +178,11 @@ export default function Workers() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-20 h-20 bg-[#6B4BFF]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-[#6B4BFF]/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <DollarSign className="w-10 h-10 text-[#6B4BFF]" />
               </div>
-              <h3 className="text-2xl font-bold text-[#1A1A2E] mb-4">3. Быстрое трудоустройство</h3>
-              <p className="text-[#1A1A2E]/70 text-lg">
+              <h3 className="text-2xl font-bold text-white mb-4">3. Быстрое трудоустройство</h3>
+              <p className="text-white/70 text-lg">
                 Фокус на быстром найме. Полная или частичная занятость — выбирай что удобно. Начинай работать уже сегодня.
               </p>
             </motion.div>
@@ -186,13 +191,17 @@ export default function Workers() {
       </section>
 
       {/* Benefits section */}
-      <section className="py-24 bg-[#F5F7FF]">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <section className="py-24 bg-[#0C0A25] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
+        <div className="absolute top-20 left-20 w-40 h-40 bg-[#FF4FC3]/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-32 h-32 bg-[#3A7BFF]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#1A1A2E] mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6">
               Почему выбирают нас
             </h2>
-            <p className="text-lg sm:text-xl text-[#1A1A2E]/70 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto">
               Все преимущества для быстрого и удобного заработка
             </p>
           </div>
@@ -203,11 +212,11 @@ export default function Workers() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-[#6B4BFF]/10"
+              className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-white/10"
             >
               <Clock className="w-12 h-12 text-[#6B4BFF] mb-6" />
-              <h3 className="text-xl font-bold text-[#1A1A2E] mb-4">Всё в одном месте</h3>
-              <p className="text-[#1A1A2E]/70">
+              <h3 className="text-xl font-bold text-white mb-4">Всё в одном месте</h3>
+              <p className="text-white/70">
                 Все вакансии собраны в одном канале. Больше не нужно искать по разным Telegram-пабликам.
               </p>
             </motion.div>
@@ -217,11 +226,11 @@ export default function Workers() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-[#6B4BFF]/10"
+              className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-white/10"
             >
               <CheckCircle className="w-12 h-12 text-[#6B4BFF] mb-6" />
-              <h3 className="text-xl font-bold text-[#1A1A2E] mb-4">Персонализация</h3>
-              <p className="text-[#1A1A2E]/70">
+              <h3 className="text-xl font-bold text-white mb-4">Персонализация</h3>
+              <p className="text-white/70">
                 Бот подберёт только те вакансии, которые тебе подходят. Никакого спама и лишних предложений.
               </p>
             </motion.div>
@@ -231,11 +240,11 @@ export default function Workers() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-[#6B4BFF]/10"
+              className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-white/10"
             >
               <Users className="w-12 h-12 text-[#6B4BFF] mb-6" />
-              <h3 className="text-xl font-bold text-[#1A1A2E] mb-4">Гибкая занятость</h3>
-              <p className="text-[#1A1A2E]/70">
+              <h3 className="text-xl font-bold text-white mb-4">Гибкая занятость</h3>
+              <p className="text-white/70">
                 Полная или частичная занятость — выбирай что удобно. Фокус на быстром трудоустройстве.
               </p>
             </motion.div>

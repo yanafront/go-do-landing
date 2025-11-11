@@ -26,13 +26,17 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="py-24 bg-[#F5F7FF]">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+    <section className="py-24 bg-[#0C0A25] relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
+      <div className="absolute top-20 right-20 w-40 h-40 bg-[#FF4FC3]/10 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-20 left-20 w-32 h-32 bg-[#3A7BFF]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             Почему это удобно
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto">
             Мы убрали всё лишнее и оставили только то, что действительно важно для быстрой работы.
           </p>
         </div>
@@ -41,17 +45,17 @@ export default function BenefitsSection() {
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
-              <Card key={index} className="text-center hover-elevate transition-all duration-300 group border-card-border">
+              <Card key={index} className="text-center hover-elevate transition-all duration-300 group border-white/10 bg-white/5 backdrop-blur-sm">
                 <CardContent className="p-6">
                   <div className="flex justify-center mb-4">
-                    <div className="w-12 h-12 bg-[#6B4BFF]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 bg-[#6B4BFF]/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Icon className="w-6 h-6 text-[#6B4BFF]" />
                     </div>
                   </div>
-                  <h3 className="text-sm sm:text-base font-semibold text-card-foreground mb-2">
+                  <h3 className="text-sm sm:text-base font-semibold text-white mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground">
+                  <p className="text-xs sm:text-sm text-white/70">
                     {benefit.description}
                   </p>
                 </CardContent>

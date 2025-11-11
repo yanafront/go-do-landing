@@ -11,7 +11,8 @@ export default function Employers() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-tr from-[#6B4BFF] to-[#3A7BFF] pt-16">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0C0A25] pt-16">
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
         {/* Floating elements */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-[#6B4BFF]/20 rounded-full blur-3xl animate-float"></div>
         <div className="absolute top-40 right-20 w-48 h-48 bg-[#3A7BFF]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
@@ -125,13 +126,17 @@ export default function Employers() {
       </section>
 
       {/* How it works section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <section className="py-24 bg-[#0C0A25] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
+        <div className="absolute top-10 left-10 w-36 h-36 bg-[#FF4FC3]/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#3A7BFF]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#1A1A2E] mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6">
               Как это работает
             </h2>
-            <p className="text-lg sm:text-xl text-[#1A1A2E]/70 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto">
               Простой процесс от создания задания до получения результата
             </p>
           </div>
@@ -144,11 +149,11 @@ export default function Employers() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-20 h-20 bg-[#6B4BFF]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-[#6B4BFF]/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Target className="w-10 h-10 text-[#6B4BFF]" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#1A1A2E] mb-4">1. Размести вакансию</h3>
-              <p className="text-[#1A1A2E]/70 text-base sm:text-lg">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">1. Размести вакансию</h3>
+              <p className="text-white/70 text-base sm:text-lg">
                 Размести вакансию в боте. Мы парсим вакансии из разных источников и принимаем заявки от работодателей напрямую.
               </p>
             </motion.div>
@@ -160,11 +165,11 @@ export default function Employers() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-20 h-20 bg-[#6B4BFF]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-[#6B4BFF]/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Users className="w-10 h-10 text-[#6B4BFF]" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#1A1A2E] mb-4">2. Быстрый найм</h3>
-              <p className="text-[#1A1A2E]/70 text-base sm:text-lg">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">2. Быстрый найм</h3>
+              <p className="text-white/70 text-base sm:text-lg">
                 Фокус на быстром найме и трудоустройстве. Полная или частичная занятость — выбирай что нужно.
               </p>
             </motion.div>
@@ -176,11 +181,11 @@ export default function Employers() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-20 h-20 bg-[#6B4BFF]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-[#6B4BFF]/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-10 h-10 text-[#6B4BFF]" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#1A1A2E] mb-4">3. Все вакансии в канале</h3>
-              <p className="text-[#1A1A2E]/70 text-base sm:text-lg">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">3. Все вакансии в канале</h3>
+              <p className="text-white/70 text-base sm:text-lg">
                 Все вакансии выгружаются в канал. Соискатели получают персонализированные предложения через бота.
               </p>
             </motion.div>
@@ -189,13 +194,17 @@ export default function Employers() {
       </section>
 
       {/* Benefits section */}
-      <section className="py-24 bg-[#F5F7FF]">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <section className="py-24 bg-[#0C0A25] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
+        <div className="absolute top-20 left-20 w-40 h-40 bg-[#FF4FC3]/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-32 h-32 bg-[#3A7BFF]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#1A1A2E] mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6">
               Почему выбирают нас
             </h2>
-            <p className="text-lg sm:text-xl text-[#1A1A2E]/70 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto">
               Все преимущества для быстрого и качественного выполнения задач
             </p>
           </div>
@@ -206,11 +215,11 @@ export default function Employers() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-[#6B4BFF]/10"
+              className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-white/10"
             >
               <Clock className="w-12 h-12 text-[#6B4BFF] mb-6" />
-              <h3 className="text-lg sm:text-xl font-bold text-[#1A1A2E] mb-4">Быстрый найм</h3>
-              <p className="text-[#1A1A2E]/70 text-sm sm:text-base">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-4">Быстрый найм</h3>
+              <p className="text-white/70 text-sm sm:text-base">
                 Фокус на быстром найме и трудоустройстве. Полная или частичная занятость.
               </p>
             </motion.div>
@@ -220,11 +229,11 @@ export default function Employers() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-[#6B4BFF]/10"
+              className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-white/10"
             >
               <CheckCircle className="w-12 h-12 text-[#6B4BFF] mb-6" />
-              <h3 className="text-lg sm:text-xl font-bold text-[#1A1A2E] mb-4">Множество источников</h3>
-              <p className="text-[#1A1A2E]/70 text-sm sm:text-base">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-4">Множество источников</h3>
+              <p className="text-white/70 text-sm sm:text-base">
                 Парсим вакансии из разных источников и принимаем заявки от работодателей напрямую.
               </p>
             </motion.div>
@@ -234,11 +243,11 @@ export default function Employers() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-[#6B4BFF]/10"
+              className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-white/10"
             >
               <Zap className="w-12 h-12 text-[#6B4BFF] mb-6" />
-              <h3 className="text-lg sm:text-xl font-bold text-[#1A1A2E] mb-4">Все в одном канале</h3>
-              <p className="text-[#1A1A2E]/70 text-sm sm:text-base">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-4">Все в одном канале</h3>
+              <p className="text-white/70 text-sm sm:text-base">
                 Все вакансии выгружаются в канал. Соискатели получают персонализированные предложения через бота.
               </p>
             </motion.div>

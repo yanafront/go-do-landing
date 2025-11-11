@@ -21,13 +21,17 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="py-24 bg-[#F5F7FF]">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+    <section className="py-24 bg-[#0C0A25] relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
+      <div className="absolute top-10 left-10 w-36 h-36 bg-[#FF4FC3]/10 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#3A7BFF]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             Как это работает
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto">
             Три простых шага до результата. Никакой бюрократии и лишних действий.
           </p>
         </div>
@@ -36,20 +40,20 @@ export default function HowItWorks() {
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <Card key={index} className="text-center hover-elevate transition-all duration-300 border-card-border">
+              <Card key={index} className="text-center hover-elevate transition-all duration-300 border-white/10 bg-white/5 backdrop-blur-sm">
                 <CardContent className="p-8">
                   {/* Icon */}
                   <div className="flex justify-center mb-6">
-                    <div className="w-16 h-16 bg-[#6B4BFF]/10 rounded-full flex items-center justify-center">
+                    <div className="w-16 h-16 bg-[#6B4BFF]/20 rounded-full flex items-center justify-center">
                       <Icon className="w-8 h-8 text-[#6B4BFF]" />
                     </div>
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-lg sm:text-xl font-semibold text-card-foreground mb-4">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-4">
                     {step.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-white/70 leading-relaxed">
                     {step.description}
                   </p>
                 </CardContent>

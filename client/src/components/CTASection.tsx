@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export default function CTASection() {
   return (
-    <section className="py-24 bg-gradient-to-tr from-[#6B4BFF] to-[#3A7BFF] relative overflow-hidden">
-      <div className="absolute inset-0 bg-black/10"></div>
-      <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-10 right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+    <section className="py-24 bg-[#0C0A25] relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
+      <div className="absolute top-10 left-10 w-32 h-32 bg-[#FF4FC3]/20 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#FF4FC3]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
@@ -16,12 +16,12 @@ export default function CTASection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-md text-white text-sm font-semibold mb-8 border border-white/30">
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-[#FF4FC3]/20 backdrop-blur-md text-[#FF4FC3] text-sm font-semibold mb-8 border border-[#FF4FC3]/30">
             <Zap className="w-4 h-4 mr-2" />
             Начни искать работу прямо сейчас
           </div>
 
-          <h2 className="text-5xl md:text-6xl font-black text-white mb-8 drop-shadow-2xl">
+          <h2 className="text-5xl md:text-6xl font-black text-[#FF4FC3] mb-8 drop-shadow-2xl">
             Готов начать?
           </h2>
 
@@ -49,15 +49,15 @@ export default function CTASection() {
           {/* Trust indicators */}
           <div className="flex flex-wrap justify-center items-center gap-12 text-white/80">
             <div className="flex items-center space-x-3">
-              <div className="w-3 h-3 bg-white rounded-full" />
+              <div className="w-3 h-3 bg-[#FF4FC3] rounded-full" />
               <span className="text-lg font-semibold">Все вакансии в одном канале</span>
             </div>
             <div className="flex items-center space-x-3">
-              <div className="w-3 h-3 bg-white rounded-full" />
+              <div className="w-3 h-3 bg-[#FF4FC3] rounded-full" />
               <span className="text-lg font-semibold">Персонализированный подбор</span>
             </div>
             <div className="flex items-center space-x-3">
-              <div className="w-3 h-3 bg-white rounded-full" />
+              <div className="w-3 h-3 bg-[#FF4FC3] rounded-full" />
               <span className="text-lg font-semibold">Быстрое трудоустройство</span>
             </div>
           </div>

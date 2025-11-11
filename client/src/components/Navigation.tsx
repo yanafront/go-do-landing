@@ -14,8 +14,9 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#6B4BFF]/20 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0C0A25]/90 backdrop-blur-xl border-b border-white/10 shadow-lg">
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/10 to-[#3A7BFF]/10"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
@@ -29,7 +30,7 @@ export default function Navigation() {
                 key={item.name}
                 href={item.href}
                 className={`text-sm font-semibold transition-colors hover:text-[#FF4FC3] ${
-                  location === item.href ? 'text-[#6B4BFF]' : 'text-[#1A1A2E]'
+                  location === item.href ? 'text-[#6B4BFF]' : 'text-white'
                 }`}
                 data-testid={`link-nav-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
               >
@@ -53,7 +54,7 @@ export default function Navigation() {
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               data-testid="button-mobile-menu"
-              className="text-[#1A1A2E] hover:text-[#FF4FC3]"
+              className="text-white hover:text-[#FF4FC3]"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -70,10 +71,11 @@ export default function Navigation() {
             />
             
             {/* Sidebar */}
-            <div className="fixed top-0 left-0 h-screen w-80 max-w-[85vw] bg-white shadow-2xl z-50 md:hidden transform transition-transform duration-300 ease-in-out">
-              <div className="flex flex-col h-full">
+            <div className="fixed top-0 left-0 h-screen w-80 max-w-[85vw] bg-[#0C0A25] shadow-2xl z-50 md:hidden transform transition-transform duration-300 ease-in-out">
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/10 to-[#3A7BFF]/10"></div>
+              <div className="relative flex flex-col h-full">
                 {/* Header */}
-                <div className="flex items-center justify-between p-6 border-b border-[#6B4BFF]/20">
+                <div className="flex items-center justify-between p-6 border-b border-white/10">
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-gradient-to-r from-[#6B4BFF] to-[#3A7BFF] rounded-xl flex items-center justify-center shadow-lg">
                       <MessageCircle className="w-6 h-6 text-white" />
@@ -84,7 +86,7 @@ export default function Navigation() {
                     variant="ghost"
                     size="icon"
                     onClick={() => setIsMenuOpen(false)}
-                    className="text-[#1A1A2E] hover:text-[#FF4FC3]"
+                    className="text-white hover:text-[#FF4FC3]"
                   >
                     <X className="h-6 w-6" />
                   </Button>
@@ -99,7 +101,7 @@ export default function Navigation() {
                       className={`block px-4 py-4 text-lg font-semibold rounded-xl transition-all duration-200 hover:bg-[#FF4FC3]/10 ${
                         location === item.href 
                           ? 'text-[#6B4BFF] bg-[#6B4BFF]/10' 
-                          : 'text-[#1A1A2E] hover:text-[#FF4FC3]'
+                          : 'text-white hover:text-[#FF4FC3]'
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                       data-testid={`link-mobile-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
@@ -110,7 +112,7 @@ export default function Navigation() {
                 </div>
 
                 {/* CTA Button */}
-                <div className="p-6 border-t border-[#6B4BFF]/20">
+                <div className="p-6 border-t border-white/10">
                   <Button
                     size="lg"
                     className="w-full bg-[#6B4BFF] hover:bg-[#3A7BFF] text-white font-bold py-4 rounded-xl shadow-lg border-0 text-lg"
