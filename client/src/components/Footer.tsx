@@ -40,6 +40,22 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Partners */}
+          <div>
+            <h3 className="font-semibold text-white mb-4">Партнерство</h3>
+            <div className="space-y-2">
+              <a 
+                href="https://t.me/yanadubeshko" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center space-x-2 text-white/70 hover:text-[#FF4FC3] transition-colors"
+              >
+                <MessageCircle className="w-4 h-4 text-[#32B4F2]" />
+                <span>Связаться с нами</span>
+              </a>
+            </div>
+          </div>
+
           {/* Contact - Hidden for now */}
           {/* <div>
             <h3 className="font-semibold text-foreground mb-4">Контакты</h3>
