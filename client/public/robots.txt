@@ -1,7 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /api/
 
 Sitemap: https://godo.job/sitemap.xml
+
+Host: https://godo.job
 
 User-agent: Googlebot
 Allow: /
@@ -11,4 +14,3 @@ Allow: /
 
 User-agent: Bingbot
 Allow: /
-

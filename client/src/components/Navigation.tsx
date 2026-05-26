@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X, Bell } from "lucide-react";
 import { Link, useLocation } from 'wouter';
 import { motion, AnimatePresence } from 'framer-motion';
+import Logo from "@/components/brand/Logo";
+import { cn } from "@/lib/utils";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,101 +12,88 @@ export default function Navigation() {
 
   const navigation = [
     { name: 'Главная', href: '/' },
-    { name: 'Для работодателей', href: '/employers' },
-    { name: 'Для исполнителей', href: '/workers' },
+    { name: 'Ищу работника', href: '/employers' },
+    { name: 'Ищу работу', href: '/workers' },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0C0A25]/90 backdrop-blur-xl border-b border-white/10 shadow-lg">
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/10 to-[#3A7BFF]/10"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <span className="font-black text-3xl bg-gradient-to-r from-[#6B4BFF] to-[#3A7BFF] bg-clip-text text-transparent">GoDo</span>
-          </Link>
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.06] bg-godo/85 backdrop-blur-xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16 sm:h-[4.5rem]">
+          <Logo imageClassName="h-7 sm:h-8" />
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-semibold transition-colors hover:text-[#FF4FC3] ${
-                  location === item.href ? 'text-[#6B4BFF]' : 'text-white'
-                }`}
+                className={cn(
+                  "godo-nav-link relative",
+                  location === item.href && "godo-nav-link-active font-semibold"
+                )}
                 data-testid={`link-nav-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 {item.name}
+                {location === item.href && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-gradient-to-r from-godo-blue to-godo-blue-dark" />
+                )}
               </Link>
             ))}
             <Button
               size="sm"
-              className="bg-[#6B4BFF] hover:bg-[#3A7BFF] text-white font-bold px-6 py-2 rounded-xl shadow-lg hover:shadow-[#3A7BFF]/25 transform hover:scale-105 transition-all duration-300 border-0"
-              data-testid="button-start-telegram"
-              onClick={() => window.open('https://t.me/go_do_job_bot', '_blank')}
+              className="godo-btn px-5 py-2 h-auto min-h-9 text-sm gap-1.5"
+              data-testid="button-nav-channel"
+              onClick={() => window.open('https://t.me/go_do_minsk', '_blank')}
             >
-              Перейти в бот
+              <Bell className="w-3.5 h-3.5" />
+              Канал с вакансиями
             </Button>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               data-testid="button-mobile-menu"
-              className="text-white hover:text-[#FF4FC3]"
+              className="text-white hover:bg-white/10 hover:text-godo-blue"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         <AnimatePresence>
           {isMenuOpen && (
             <>
-              {/* Overlay */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="fixed top-0 left-0 right-0 bottom-0 w-full h-screen bg-black/50 z-40 md:hidden"
+                className="fixed inset-0 bg-black/60 z-40 md:hidden"
                 onClick={() => setIsMenuOpen(false)}
               />
-              
-              {/* Sidebar */}
-              <motion.div 
+              <motion.div
                 initial={{ x: '-100%' }}
                 animate={{ x: 0 }}
                 exit={{ x: '-100%' }}
                 transition={{ type: 'tween', duration: 0.3, ease: 'easeInOut' }}
-                className="fixed top-0 left-0 h-screen w-80 max-w-[85vw] bg-[#0C0A25] shadow-2xl z-50 md:hidden"
+                className="fixed top-0 left-0 h-screen w-80 max-w-[85vw] bg-godo-elevated border-r border-white/[0.06] shadow-2xl z-50 md:hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/10 to-[#3A7BFF]/10"></div>
-                <div className="relative flex flex-col h-full">
-                  {/* Header */}
-                  <div className="flex items-center justify-between p-6 border-b border-white/10">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-gradient-to-r from-[#6B4BFF] to-[#3A7BFF] rounded-xl flex items-center justify-center shadow-lg">
-                        <MessageCircle className="w-6 h-6 text-white" />
-                      </div>
-                      <span className="font-black text-2xl bg-gradient-to-r from-[#6B4BFF] to-[#3A7BFF] bg-clip-text text-transparent">GoDo</span>
-                    </div>
+                <div className="flex flex-col h-full">
+                  <div className="flex items-center justify-between p-6 border-b border-white/[0.06]">
+                    <Logo link={false} imageClassName="h-8" />
                     <Button
                       variant="ghost"
                       size="icon"
                       onClick={() => setIsMenuOpen(false)}
-                      className="text-white hover:text-[#FF4FC3]"
+                      className="text-white hover:bg-white/10"
                     >
                       <X className="h-6 w-6" />
                     </Button>
                   </div>
 
-                  {/* Navigation Links */}
                   <div className="flex-1 px-6 py-8 space-y-2">
                     {navigation.map((item, index) => (
                       <motion.div
@@ -115,11 +104,12 @@ export default function Navigation() {
                       >
                         <Link
                           href={item.href}
-                          className={`block px-4 py-4 text-lg font-semibold rounded-xl transition-all duration-200 hover:bg-[#FF4FC3]/10 ${
-                            location === item.href 
-                              ? 'text-[#6B4BFF] bg-[#6B4BFF]/10' 
-                              : 'text-white hover:text-[#FF4FC3]'
-                          }`}
+                          className={cn(
+                            "block px-4 py-4 text-lg font-medium rounded-2xl transition-all duration-200",
+                            location === item.href
+                              ? "text-godo-blue bg-godo-blue/10"
+                              : "text-white/90 hover:text-white hover:bg-white/5"
+                          )}
                           onClick={() => setIsMenuOpen(false)}
                           data-testid={`link-mobile-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
                         >
@@ -129,23 +119,34 @@ export default function Navigation() {
                     ))}
                   </div>
 
-                  {/* CTA Button */}
-                  <motion.div 
-                    className="p-6 border-t border-white/10"
+                  <motion.div
+                    className="p-6 space-y-3 border-t border-white/[0.06]"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
                   >
                     <Button
                       size="lg"
-                      className="w-full bg-[#6B4BFF] hover:bg-[#3A7BFF] text-white font-bold py-4 rounded-xl shadow-lg border-0 text-lg"
-                      data-testid="button-mobile-telegram"
+                      className="godo-btn w-full py-4 text-lg h-auto gap-2"
+                      data-testid="button-mobile-channel"
+                      onClick={() => {
+                        window.open('https://t.me/go_do_minsk', '_blank');
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      <Bell className="w-5 h-5" />
+                      Канал с вакансиями
+                    </Button>
+                    <Button
+                      size="lg"
+                      className="godo-btn-outline w-full py-3 text-base h-auto"
+                      data-testid="button-mobile-bot"
                       onClick={() => {
                         window.open('https://t.me/go_do_job_bot', '_blank');
                         setIsMenuOpen(false);
                       }}
                     >
-                      Перейти в бот
+                      Открыть бота
                     </Button>
                   </motion.div>
                 </div>

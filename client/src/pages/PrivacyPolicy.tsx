@@ -1,169 +1,123 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SmileDivider from "@/components/brand/SmileDivider";
+import SEO from "@/components/SEO";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-[#0C0A25] relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
-      <div className="absolute top-20 left-20 w-40 h-40 bg-[#FF4FC3]/10 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 right-20 w-32 h-32 bg-[#3A7BFF]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-      
+    <div className="min-h-screen bg-godo relative overflow-hidden">
+      <SEO
+        title="Политика конфиденциальности"
+        description="Политика конфиденциальности GoDo — как мы обрабатываем персональные данные пользователей сервиса поиска работы в Минске."
+        canonical="/privacy-policy"
+      />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-64 bg-godo-blue/10 rounded-full blur-[100px] pointer-events-none" />
       <Navigation />
-      
-      <div className="relative z-10 pt-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-4xl md:text-5xl font-black text-white mb-8">
+      <div className="relative z-10 pt-24 pb-8">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4 text-center">
             Политика конфиденциальности
           </h1>
-          
-          <div className="prose prose-lg max-w-none prose-invert">
-            <p className="text-white/70 mb-6">
-              <strong className="text-white">Дата последнего обновления:</strong> {new Date().toLocaleDateString('ru-RU')}
+          <SmileDivider className="mb-10" />
+          <div className="godo-glass-card p-8 sm:p-10 space-y-8">
+            <p className="text-white/60 text-sm">
+              <strong className="text-white">Дата последнего обновления:</strong>{" "}
+              {new Date().toLocaleDateString('ru-RU')}
             </p>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">1. Общие положения</h2>
-              <p className="text-white/80 mb-4">
-                Настоящая Политика конфиденциальности (далее — «Политика») определяет порядок обработки 
-                персональных данных пользователей сервиса GoDo (далее — «Сервис») в соответствии с 
-                Законом Республики Беларусь «О защите персональных данных» от 7 мая 2021 г. № 99-З.
+            <section>
+              <h2 className="text-xl font-bold text-white mb-3">1. Общие положения</h2>
+              <p className="text-white/70 mb-3 text-sm leading-relaxed">
+                Политика определяет порядок обработки персональных данных пользователей GoDo в соответствии с Законом РБ «О защите персональных данных» от 7 мая 2021 г. № 99-З.
               </p>
-              <p className="text-white/80 mb-4">
-                Используя Сервис, Пользователь дает согласие на обработку своих персональных данных 
-                в соответствии с настоящей Политикой.
+              <p className="text-white/70 text-sm leading-relaxed">
+                Используя Сервис, Пользователь дает согласие на обработку данных в соответствии с настоящей Политикой.
               </p>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">2. Какие данные мы собираем</h2>
-              <p className="text-white/80 mb-4">
-                <strong className="text-white">2.1. Данные, предоставляемые пользователем:</strong>
-              </p>
-              <ul className="list-disc pl-6 text-white/80 mb-4">
-                <li>Имя пользователя в Telegram</li>
-                <li>Идентификатор пользователя в Telegram</li>
-                <li>Контактная информация (при необходимости)</li>
-                <li>Профильная информация (навыки, опыт работы)</li>
-                <li>Содержание размещенных заданий и откликов</li>
+            <section>
+              <h2 className="text-xl font-bold text-white mb-3">2. Какие данные собираем</h2>
+              <p className="text-white/80 text-sm font-medium mb-2">Предоставляемые пользователем:</p>
+              <ul className="list-disc pl-5 text-white/70 text-sm space-y-1 mb-4">
+                <li>Имя и ID в Telegram</li>
+                <li>Контактная информация</li>
+                <li>Профиль (навыки, опыт)</li>
+                <li>Содержание заданий и откликов</li>
               </ul>
-              
-              <p className="text-white/80 mb-4">
-                <strong className="text-white">2.2. Данные, собираемые автоматически:</strong>
-              </p>
-              <ul className="list-disc pl-6 text-white/80 mb-4">
+              <p className="text-white/80 text-sm font-medium mb-2">Автоматически:</p>
+              <ul className="list-disc pl-5 text-white/70 text-sm space-y-1">
                 <li>Время использования сервиса</li>
-                <li>Тип устройства и браузера</li>
-                <li>IP-адрес (в анонимизированном виде)</li>
-                <li>Данные о взаимодействии с ботом</li>
+                <li>Тип устройства</li>
+                <li>IP-адрес (анонимизированный)</li>
+                <li>Данные взаимодействия с ботом</li>
               </ul>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">3. Цели обработки данных</h2>
-              <p className="text-white/80 mb-4">
-                Персональные данные обрабатываются в следующих целях:
-              </p>
-              <ul className="list-disc pl-6 text-white/80 mb-4">
-                <li>Предоставление услуг платформы GoDo</li>
+            <section>
+              <h2 className="text-xl font-bold text-white mb-3">3. Цели обработки</h2>
+              <ul className="list-disc pl-5 text-white/70 text-sm space-y-1">
+                <li>Предоставление услуг GoDo</li>
                 <li>Связывание исполнителей и заказчиков</li>
-                <li>Обеспечение безопасности и предотвращение мошенничества</li>
-                <li>Улучшение качества сервиса</li>
-                <li>Соблюдение требований законодательства РБ</li>
-                <li>Обработка обращений и жалоб пользователей</li>
+                <li>Безопасность и предотвращение мошенничества</li>
+                <li>Улучшение сервиса</li>
+                <li>Соблюдение законодательства РБ</li>
               </ul>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">4. Правовые основания обработки</h2>
-              <p className="text-white/80 mb-4">
-                Обработка персональных данных осуществляется на основании:
-              </p>
-              <ul className="list-disc pl-6 text-white/80 mb-4">
-                <li>Согласия субъекта персональных данных (ст. 6 Закона РБ «О защите персональных данных»)</li>
-                <li>Необходимости исполнения договора (ст. 6 Закона РБ «О защите персональных данных»)</li>
-                <li>Соблюдения правовых обязательств (ст. 6 Закона РБ «О защите персональных данных»)</li>
+            <section>
+              <h2 className="text-xl font-bold text-white mb-3">4. Правовые основания</h2>
+              <ul className="list-disc pl-5 text-white/70 text-sm space-y-1">
+                <li>Согласие субъекта данных</li>
+                <li>Исполнение договора</li>
+                <li>Соблюдение правовых обязательств</li>
               </ul>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">5. Сроки хранения данных</h2>
-              <p className="text-white/80 mb-4">
-                5.1. Персональные данные хранятся в течение срока, необходимого для достижения целей обработки.
-              </p>
-              <p className="text-white/80 mb-4">
-                5.2. После достижения целей обработки данные подлежат удалению или анонимизации.
-              </p>
-              <p className="text-white/80 mb-4">
-                5.3. Данные могут храниться дольше в случаях, предусмотренных законодательством РБ.
+            <section>
+              <h2 className="text-xl font-bold text-white mb-3">5. Сроки хранения</h2>
+              <p className="text-white/70 mb-2 text-sm leading-relaxed">Данные хранятся до достижения целей обработки, затем удаляются или анонимизируются.</p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-white mb-3">6. Передача третьим лицам</h2>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Данные не передаются без согласия, кроме случаев, предусмотренных законом. Возможна передача в анонимизированном виде для аналитики.
               </p>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">6. Передача данных третьим лицам</h2>
-              <p className="text-white/80 mb-4">
-                6.1. Персональные данные не передаются третьим лицам без согласия пользователя.
-              </p>
-              <p className="text-white/80 mb-4">
-                6.2. Исключения составляют случаи, предусмотренные законодательством РБ.
-              </p>
-              <p className="text-white/80 mb-4">
-                6.3. Данные могут передаваться в анонимизированном виде для аналитических целей.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">7. Права субъектов персональных данных</h2>
-              <p className="text-white/80 mb-4">
-                В соответствии с Законом РБ «О защите персональных данных» пользователи имеют право:
-              </p>
-              <ul className="list-disc pl-6 text-white/80 mb-4">
-                <li>Получать информацию об обработке своих персональных данных</li>
-                <li>Требовать уточнения, блокирования или уничтожения данных</li>
-                <li>Отзывать согласие на обработку данных</li>
-                <li>Обращаться с жалобами в уполномоченные органы</li>
-                <li>Получать подтверждение факта обработки данных</li>
+            <section>
+              <h2 className="text-xl font-bold text-white mb-3">7. Права пользователей</h2>
+              <ul className="list-disc pl-5 text-white/70 text-sm space-y-1">
+                <li>Информация об обработке данных</li>
+                <li>Уточнение, блокирование или удаление</li>
+                <li>Отзыв согласия</li>
+                <li>Обращение в уполномоченные органы</li>
               </ul>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">8. Меры защиты данных</h2>
-              <p className="text-white/80 mb-4">
-                8.1. Применяются технические и организационные меры защиты персональных данных.
-              </p>
-              <p className="text-white/80 mb-4">
-                8.2. Доступ к персональным данным имеют только уполномоченные лица.
-              </p>
-              <p className="text-white/80 mb-4">
-                8.3. Регулярно проводится мониторинг безопасности системы.
+            <section>
+              <h2 className="text-xl font-bold text-white mb-3">8. Защита данных</h2>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Применяются технические и организационные меры. Доступ имеют только уполномоченные лица.
               </p>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">9. Cookies и аналогичные технологии</h2>
-              <p className="text-white/80 mb-4">
-                Сервис может использовать cookies и аналогичные технологии для улучшения функциональности 
-                и анализа использования сервиса.
+            <section>
+              <h2 className="text-xl font-bold text-white mb-3">9. Cookies</h2>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Сервис может использовать cookies для улучшения функциональности и аналитики.
               </p>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">10. Изменения в политике</h2>
-              <p className="text-white/80 mb-4">
-                Администрация оставляет за собой право изменять настоящую Политику. 
-                Пользователи будут уведомлены об изменениях через Telegram-бот.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">11. Контактная информация</h2>
-              <p className="text-white/80 mb-4">
-                По вопросам обработки персональных данных обращайтесь через Telegram-бот @proxiDBot.
+            <section>
+              <h2 className="text-xl font-bold text-white mb-3">10. Контакты</h2>
+              <p className="text-white/70 text-sm leading-relaxed">
+                По вопросам обработки данных: @go_do_job_bot в Telegram.
               </p>
             </section>
           </div>
         </div>
       </div>
-      
       <Footer />
     </div>
   );

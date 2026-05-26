@@ -1,21 +1,31 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import SmileDivider from "@/components/brand/SmileDivider";
+import { Home } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-[#F5F7FF]">
-      <Card className="w-full max-w-md mx-4">
-        <CardContent className="pt-6">
-          <div className="flex mb-4 gap-2">
-            <AlertCircle className="h-8 w-8 text-[#FF4FC3]" />
-            <h1 className="text-2xl font-bold text-[#1A1A2E]">404 Page Not Found</h1>
-          </div>
-
-          <p className="mt-4 text-sm text-[#1A1A2E]/70">
-            Did you forget to add the page to the router?
+    <div className="min-h-screen bg-godo flex flex-col">
+      <Navigation />
+      <div className="flex-1 flex items-center justify-center px-4 pt-20">
+        <div className="text-center max-w-md">
+          <p className="text-7xl font-extrabold godo-heading-accent mb-2">404</p>
+          <SmileDivider className="mb-6" />
+          <h1 className="text-2xl font-bold text-white mb-3">Страница не найдена</h1>
+          <p className="text-white/60 mb-8 text-sm">
+            Похоже, эта страница переехала или никогда не существовала.
           </p>
-        </CardContent>
-      </Card>
+          <Link href="/">
+            <Button className="godo-btn gap-2 h-auto py-3 px-8">
+              <Home className="w-5 h-5" />
+              На главную
+            </Button>
+          </Link>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }

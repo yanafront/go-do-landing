@@ -1,148 +1,146 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, Zap, CheckCircle, Smartphone } from "lucide-react";
+import { ArrowRight, Zap, CheckCircle, Bell, Megaphone, BotMessageSquare, Users } from "lucide-react";
 import { motion } from "framer-motion";
-import { useLocation } from 'wouter';
 import logoImage from "@/components/img/logo.png";
+import SmileDivider from "@/components/brand/SmileDivider";
 
 export default function HeroSection() {
-  const [, setLocation] = useLocation();
-
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0C0A25] pt-16" aria-label="Главная секция">
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
-      {/* Floating elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-[#6B4BFF]/20 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute top-40 right-20 w-48 h-48 bg-[#3A7BFF]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-[#6B4BFF]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
-      <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-[#FF4FC3]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '6s' }}></div>
-      <div className="absolute bottom-1/3 right-10 w-36 h-36 bg-[#3A7BFF]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '8s' }}></div>
+    <section className="godo-hero-bg relative min-h-screen flex flex-col items-center justify-center pt-20 pb-16" aria-label="Главная секция">
+      <div className="absolute top-24 left-[10%] w-64 h-64 bg-godo-blue/20 rounded-full blur-[100px] animate-glow-pulse pointer-events-none" />
+      <div className="absolute bottom-32 right-[8%] w-80 h-80 bg-godo-blue-dark/15 rounded-full blur-[120px] animate-glow-pulse pointer-events-none" style={{ animationDelay: '2s' }} />
 
-      {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 text-center py-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
         >
-          {/* Badge */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="inline-flex items-center bg-white/20 backdrop-blur-md text-white px-6 py-3 rounded-full text-sm font-semibold mb-8 border border-white/30"
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="godo-badge mb-8"
           >
-            🤖 Умный бот для поиска работы
+            <Megaphone className="w-4 h-4 text-godo-blue" />
+            Уже 1 200+ подписчиков
           </motion.div>
 
-          {/* Main heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="text-3xl sm:text-4xl md:text-6xl font-black mb-8 leading-tight px-4 sm:px-0"
-            >
-            <span className="text-white drop-shadow-2xl">Найди работу </span>
-            <span className="bg-gradient-to-r from-white via-white/90 to-white/80 bg-clip-text text-transparent drop-shadow-2xl">быстро и легко</span>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.25 }}
+            className="flex justify-center mb-6"
+          >
+            <img
+              src={logoImage}
+              alt="GoDo"
+              className="w-auto max-w-[280px] sm:max-w-[340px] drop-shadow-godo-glow"
+            />
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.35 }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight tracking-tight"
+          >
+            <span className="text-white">Все вакансии Минска </span>
+            <br className="hidden sm:block" />
+            <span className="godo-heading-accent">в одном канале</span>
           </motion.h1>
 
-          {/* Hero Image */}
-          <motion.div
-              initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="relative z-10 flex justify-center"
-          >
-            <div className="relative">
-              <img
-                  src={logoImage}
-                  alt="GoDo Logo"
-                  className="w-auto h-auto max-w-[300px] sm:max-w-[400px] md:max-w-[300px] brightness-110 contrast-110 saturate-110 drop-shadow-2xl"
-              />
-            </div>
-          </motion.div>
+          <SmileDivider className="mb-6" />
 
-          {/* Subheading */}
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto font-medium px-4 sm:px-0"
-            >
-            Просто скажи боту город и свои навыки голосом или текстом. Он задаст уточняющие вопросы и пришлёт подходящие вакансии. Всё в одном месте — больше не нужно искать по разным Telegram-каналам.
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-base sm:text-lg md:text-xl text-white/70 mb-4 max-w-2xl mx-auto leading-relaxed"
+          >
+            Подпишись — и получай свежие вакансии каждый день. Пока другие листают десятки пабликов, ты уже откликаешься первым.
           </motion.p>
 
-          {/* CTA Buttons */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.55 }}
+            className="text-sm text-orange-400/80 font-medium mb-8"
+          >
+            🔥 Сегодня уже опубликовано 300 новых вакансий
+          </motion.p>
+
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-16"
+            transition={{ duration: 0.8, delay: 0.65 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4"
           >
             <Button
               size="lg"
-              className="bg-[#6B4BFF] hover:bg-[#3A7BFF] text-white font-bold py-4 px-8 sm:py-6 sm:px-12 rounded-2xl text-lg sm:text-xl group relative overflow-hidden shadow-2xl hover:shadow-[#3A7BFF]/25 transform hover:scale-110 transition-all duration-300 border-0"
-              data-testid="button-find-work"
-              onClick={() => setLocation('/workers')}
+              className="godo-btn py-4 px-8 sm:py-5 sm:px-10 text-base sm:text-lg h-auto group"
+              data-testid="button-subscribe-channel"
+              onClick={() => window.open('https://t.me/go_do_minsk', '_blank')}
             >
-              <span className="relative z-10 flex items-center">
-                💼 Найти работу
-                <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
-              </span>
+              <Bell className="w-5 h-5" />
+              Подписаться на канал
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-
             <Button
               size="lg"
-              className="bg-[#6B4BFF] hover:bg-[#3A7BFF] text-white font-bold py-4 px-8 sm:py-6 sm:px-12 rounded-2xl text-lg sm:text-xl group relative overflow-hidden shadow-2xl hover:shadow-[#3A7BFF]/25 transform hover:scale-110 transition-all duration-300 border-0"
-              data-testid="button-find-worker"
-              onClick={() => setLocation('/employers')}
+              className="godo-btn-outline py-4 px-8 sm:py-5 sm:px-10 text-base sm:text-lg h-auto group"
+              data-testid="button-open-bot"
+              onClick={() => window.open('https://t.me/go_do_job_bot', '_blank')}
             >
-              <span className="relative z-10 flex items-center">
-                👥 Найти сотрудника
-                <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
-              </span>
+              <BotMessageSquare className="w-5 h-5" />
+              Открыть бота
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12"
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.7 }}
+            className="text-xs text-white/40 mb-12"
           >
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-2 drop-shadow-lg">1 мин</div>
-              <div className="text-white/80 text-base sm:text-lg">до первых вакансий</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-2 drop-shadow-lg">Персонализация</div>
-              <div className="text-white/80 text-base sm:text-lg">только подходящие вакансии</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-2 drop-shadow-lg">24/7</div>
-              <div className="text-white/80 text-base sm:text-lg">в Telegram</div>
-            </div>
+            Бесплатно · Без регистрации · Отписаться можно в любой момент
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto mb-10"
+          >
+            {[
+              { value: "1 200+", label: "подписчиков канала" },
+              { value: "50+", label: "вакансий в неделю" },
+              { value: "Бесплатно", label: "навсегда" },
+            ].map((stat) => (
+              <div key={stat.label} className="godo-glass-card px-6 py-5 text-center">
+                <div className="godo-stat-value mb-1">{stat.value}</div>
+                <div className="text-white/55 text-sm">{stat.label}</div>
+              </div>
+            ))}
           </motion.div>
 
-          {/* Trust indicators */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.2 }}
-            className="hidden sm:flex sm:flex-row items-center justify-center space-x-8 text-white/80"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1 }}
+            className="hidden sm:flex flex-wrap items-center justify-center gap-8 text-white/55"
           >
-            <div className="flex items-center space-x-2">
-              <Smartphone className="w-6 h-6" />
-                <span className="text-base sm:text-lg font-medium">В Telegram</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="w-6 h-6" />
-              <span className="text-base sm:text-lg font-medium">Безопасно</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Zap className="w-6 h-6" />
-              <span className="text-base sm:text-lg font-medium">Мгновенно</span>
-            </div>
+            {[
+              { icon: Users, text: "Растущее сообщество" },
+              { icon: CheckCircle, text: "Проверенные вакансии" },
+              { icon: Zap, text: "Обновления каждый день" },
+            ].map(({ icon: Icon, text }) => (
+              <div key={text} className="flex items-center gap-2">
+                <Icon className="w-5 h-5 text-godo-blue" />
+                <span className="text-sm font-medium">{text}</span>
+              </div>
+            ))}
           </motion.div>
         </motion.div>
       </div>

@@ -11,7 +11,16 @@ export default {
         sm: ".1875rem", /* 3px */
       },
       colors: {
-        // Flat / base colors (regular buttons)
+        godo: {
+          DEFAULT: "#05070A",
+          elevated: "#0E1219",
+          card: "#121820",
+        },
+        "godo-blue": {
+          DEFAULT: "#00AEEF",
+          dark: "#0071BC",
+          muted: "rgba(0, 174, 239, 0.15)",
+        },
         background: "hsl(var(--background) / <alpha-value>)",
         foreground: "hsl(var(--foreground) / <alpha-value>)",
         border: "hsl(var(--border) / <alpha-value>)",
@@ -27,29 +36,13 @@ export default {
           border: "hsl(var(--popover-border) / <alpha-value>)",
         },
         primary: {
-          DEFAULT: "#6B4BFF",
+          DEFAULT: "#00AEEF",
           foreground: "#FFFFFF",
-          border: "#6B4BFF",
-        },
-        accent: {
-          DEFAULT: "#FF4FC3",
-          foreground: "#FFFFFF",
-          border: "#FF4FC3",
-        },
-        gradient: {
-          start: "#6B4BFF",
-          end: "#3A7BFF",
+          border: "#0071BC",
         },
         telegram: {
-          DEFAULT: "#32B4F2",
+          DEFAULT: "#00AEEF",
           foreground: "#FFFFFF",
-        },
-        dark: {
-          bg: "#0C0A25",
-          text: "#1A1A2E",
-        },
-        light: {
-          bg: "#F5F7FF",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary) / <alpha-value>)",
@@ -101,43 +94,16 @@ export default {
           busy: "rgb(239 68 68)",
           offline: "rgb(156 163 175)",
         },
-        purple: {
-          50: "#f5f3ff",
-          100: "#e9e4ff",
-          200: "#d4c7ff",
-          300: "#b8a3ff",
-          400: "#a4b3f4",
-          500: "#b100d8",
-          600: "#6700b9",
-          700: "#4c0088",
-          800: "#2d0052",
-          900: "#170aa8",
-          dark: "#170aa8",
-          light: "#a4b3f4",
-          accent: "#b100d8",
-          deep: "#6700b9",
-        },
-        blue: {
-          purple: "#170aa8",
-          deep: "#1a0d8f",
-          medium: "#3d2ab8",
-        },
-        pink: {
-          purple: "#d100e8",
-          light: "#e8a3f4",
-          soft: "#f4c7ff",
-        },
-        indigo: {
-          deep: "#2d1a88",
-          medium: "#4c3ab8",
-          light: "#a4b3f4",
-        },
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["Poppins", "system-ui", "sans-serif"],
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
-        heading: ["Outfit", "sans-serif"],
+        heading: ["Poppins", "system-ui", "sans-serif"],
+      },
+      boxShadow: {
+        "godo-blue": "0 8px 32px rgba(0, 174, 239, 0.25)",
+        "godo-glow": "0 0 60px rgba(0, 174, 239, 0.2)",
       },
       keyframes: {
         "accordion-down": {

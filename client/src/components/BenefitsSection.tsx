@@ -1,69 +1,77 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle, Clock, FileX, Banknote } from "lucide-react";
+import { Megaphone, Clock, Filter, RefreshCcw } from "lucide-react";
+import SectionShell from "@/components/brand/SectionShell";
+import SmileDivider from "@/components/brand/SmileDivider";
+import { motion } from "framer-motion";
 
 export default function BenefitsSection() {
   const benefits = [
     {
-      icon: MessageCircle,
-      title: "Умный бот в Telegram",
-      description: "Голосом или текстом опиши что ищешь. Бот задаст уточняющие вопросы и найдёт подходящие вакансии."
+      icon: Megaphone,
+      title: "Всё в одном канале",
+      description:
+        "Не нужно листать десятки пабликов — мы собрали лучшие вакансии Минска в одном Telegram-канале.",
+    },
+    {
+      icon: RefreshCcw,
+      title: "Обновляется ежедневно",
+      description:
+        "Свежие предложения каждый день. Подпишись — и не пропустишь ни одной подходящей вакансии.",
+    },
+    {
+      icon: Filter,
+      title: "Только проверенные",
+      description:
+        "Мы фильтруем дубли и неактуальные объявления. В канале — только живые вакансии от реальных заказчиков.",
     },
     {
       icon: Clock,
-      title: "Всё в одном месте",
-      description: "Все вакансии собраны в одном канале. Больше не нужно искать по разным Telegram-пабликам."
+      title: "Экономия времени",
+      description:
+        "Вместо часов поиска — просто открой канал. Работа сама найдёт тебя через уведомления.",
     },
-    {
-      icon: FileX,
-      title: "Персонализированный подбор",
-      description: "Бот подберёт только те вакансии, которые тебе подходят. Никакого спама и лишних предложений."
-    },
-    {
-      icon: Banknote,
-      title: "Быстрый найм",
-      description: "Фокус на быстром трудоустройстве. Полная или частичная занятость — выбирай что удобно."
-    }
   ];
 
   return (
-    <section className="py-24 bg-[#0C0A25] relative overflow-hidden" aria-labelledby="benefits-heading">
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
-      <div className="absolute top-20 right-20 w-40 h-40 bg-[#FF4FC3]/10 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 left-20 w-32 h-32 bg-[#3A7BFF]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 id="benefits-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-            Почему это удобно
+    <SectionShell ariaLabelledby="benefits-heading">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="text-center mb-14">
+          <h2 id="benefits-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3">
+            Почему наш канал
           </h2>
-          <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto">
-            Мы убрали всё лишнее и оставили только то, что действительно важно для быстрой работы.
+          <SmileDivider />
+          <p className="text-base sm:text-lg text-white/60 max-w-xl mx-auto mt-4">
+            Подпишись один раз — и вакансии всегда под рукой.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
-              <Card key={index} className="text-center hover-elevate transition-all duration-300 group border-white/10 bg-white/5 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <div className="flex justify-center mb-4">
-                    <div className="w-12 h-12 bg-[#6B4BFF]/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Icon className="w-6 h-6 text-[#6B4BFF]" />
-                    </div>
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                viewport={{ once: true }}
+                className="godo-glass-card p-6 text-center group"
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-godo-blue/15 flex items-center justify-center group-hover:scale-110 transition-transform ring-1 ring-godo-blue/20">
+                    <Icon className="w-6 h-6 text-godo-blue" />
                   </div>
-                  <h3 className="text-sm sm:text-base font-semibold text-white mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-white/70">
-                    {benefit.description}
-                  </p>
-                </CardContent>
-              </Card>
+                </div>
+                <h3 className="text-sm sm:text-base font-semibold text-white mb-2">
+                  {benefit.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-white/55 leading-relaxed">
+                  {benefit.description}
+                </p>
+              </motion.div>
             );
           })}
         </div>
       </div>
-    </section>
+    </SectionShell>
   );
 }

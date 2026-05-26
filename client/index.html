@@ -2,36 +2,41 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
     
     <!-- Primary Meta Tags -->
-    <title>GoDo - Работа и исполнители за пару кликов в Telegram</title>
-    <meta name="title" content="GoDo - Работа и исполнители за пару кликов в Telegram" />
-    <meta name="description" content="Быстро найди работу или исполнителя в Telegram. Зарабатывай сегодня или найди работника прямо сейчас. Без резюме и лишних документов. Персонализированный подбор вакансий голосом или текстом." />
-    <meta name="keywords" content="работа, вакансии, поиск работы, исполнители, фриланс, Telegram бот, работа в Telegram, быстрый заработок, персонализированный подбор вакансий, работа голосом" />
+    <title>Работа в Минске — вакансии и подработка на сегодня | GoDo</title>
+    <meta name="title" content="Работа в Минске — вакансии и подработка на сегодня | GoDo" />
+    <meta name="description" content="Свежие вакансии в Минске каждый день. Подработка без опыта, работа грузчиком, курьером, разнорабочим. Подпишись на Telegram-канал GoDo — все вакансии Минска в одном месте. Бесплатно." />
+    <meta name="keywords" content="работа в Минске, вакансии Минск, подработка Минск, работа Минск сегодня, работа без опыта Минск, вакансии Минск свежие, подработка на день Минск, работа грузчик Минск, работа курьер Минск, работа разнорабочий Минск, найти работу Минск, работа в Минске без резюме, Telegram вакансии Минск, канал с вакансиями Минск, GoDo работа" />
     <meta name="author" content="GoDo" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="language" content="Russian" />
-    <meta name="revisit-after" content="7 days" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="geo.region" content="BY-HM" />
+    <meta name="geo.placename" content="Минск" />
+    <meta name="geo.position" content="53.9006;27.5590" />
+    <meta name="ICBM" content="53.9006, 27.5590" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://godo.job/" />
-    <meta property="og:title" content="GoDo - Работа и исполнители за пару кликов в Telegram" />
-    <meta property="og:description" content="Быстро найди работу или исполнителя в Telegram. Зарабатывай сегодня или найди работника прямо сейчас. Без резюме и лишних документов." />
-    <meta property="og:image" content="https://godo.job/og-image.jpg" />
+    <meta property="og:title" content="Работа в Минске — свежие вакансии каждый день | GoDo" />
+    <meta property="og:description" content="Все вакансии Минска в одном Telegram-канале. Подработка, полная занятость, работа без опыта. Подпишись бесплатно — откликайся первым." />
+    <meta property="og:image" content="https://godo.job/logo.png" />
     <meta property="og:locale" content="ru_RU" />
-    <meta property="og:site_name" content="GoDo" />
+    <meta property="og:site_name" content="GoDo — работа в Минске" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://godo.job/" />
-    <meta property="twitter:title" content="GoDo - Работа и исполнители за пару кликов в Telegram" />
-    <meta property="twitter:description" content="Быстро найди работу или исполнителя в Telegram. Зарабатывай сегодня или найди работника прямо сейчас." />
-    <meta property="twitter:image" content="https://godo.job/og-image.jpg" />
+    <meta property="twitter:title" content="Работа в Минске — свежие вакансии каждый день | GoDo" />
+    <meta property="twitter:description" content="Все вакансии Минска в одном Telegram-канале. Подпишись бесплатно — откликайся первым." />
+    <meta property="twitter:image" content="https://godo.job/logo.png" />
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://godo.job/" />
+    <link rel="alternate" hreflang="ru" href="https://godo.job/" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -39,9 +44,10 @@
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://mc.yandex.ru">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Structured Data: Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -49,24 +55,35 @@
       "name": "GoDo",
       "url": "https://godo.job",
       "logo": "https://godo.job/logo.png",
-      "description": "Платформа для быстрого поиска работы и исполнителей в Telegram",
+      "description": "Все вакансии Минска в одном Telegram-канале. Подработка и полная занятость.",
+      "areaServed": {
+        "@type": "City",
+        "name": "Минск",
+        "sameAs": "https://ru.wikipedia.org/wiki/Минск"
+      },
       "sameAs": [
+        "https://t.me/go_do_minsk",
         "https://t.me/go_do_job_bot"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "Customer Service",
-        "availableLanguage": "Russian"
+        "availableLanguage": "Russian",
+        "url": "https://t.me/yanadubeshko"
       }
     }
     </script>
+    
+    <!-- Structured Data: WebSite with search -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "GoDo",
+      "name": "GoDo — работа и вакансии в Минске",
+      "alternateName": ["GoDo", "ГоуДу", "GoDo работа"],
       "url": "https://godo.job",
-      "description": "Быстро найди работу или исполнителя в Telegram",
+      "description": "Свежие вакансии Минска каждый день в одном Telegram-канале. Подработка, полная занятость, работа без опыта.",
+      "inLanguage": "ru",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://godo.job/?q={search_term_string}",
@@ -74,19 +91,91 @@
       }
     }
     </script>
+
+    <!-- Structured Data: EmploymentAgency (local business) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "GoDo Bot",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Telegram",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "RUB"
+      "@type": "EmploymentAgency",
+      "name": "GoDo — вакансии Минска",
+      "url": "https://godo.job",
+      "logo": "https://godo.job/logo.png",
+      "description": "Telegram-канал с вакансиями в Минске. Подработка и полная занятость: грузчики, курьеры, разнорабочие, мастера, студенты.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Минск",
+        "addressRegion": "Минская область",
+        "addressCountry": "BY"
       },
-      "description": "Умный бот для поиска работы в Telegram. Скажи город и навыки голосом или текстом — получи персонализированные вакансии."
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "53.9006",
+        "longitude": "27.5590"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Минск"
+      },
+      "priceRange": "Бесплатно",
+      "openingHours": "Mo-Su 00:00-23:59",
+      "sameAs": [
+        "https://t.me/go_do_minsk"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQ (popular search queries) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Как найти работу в Минске быстро?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Подпишитесь на Telegram-канал GoDo (@go_do_minsk) — свежие вакансии Минска публикуются каждый день. Грузчики, курьеры, разнорабочие, мастера и другие направления. Отклик в один клик, без резюме."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Где найти подработку в Минске на день?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "В Telegram-канале GoDo ежедневно появляются вакансии для подработки в Минске: разовые задания, смены на день, подработка для студентов. Подпишитесь на @go_do_minsk — бесплатно."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли найти работу без опыта в Минске?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. В канале GoDo много вакансий без требований к опыту: грузчик, курьер, промоутер, разнорабочий, упаковщик. Подпишитесь на канал @go_do_minsk и откликайтесь первым."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "GoDo бесплатный?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, подписка на канал с вакансиями и использование бота GoDo полностью бесплатны. Никаких скрытых платежей."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://godo.job/"},
+        {"@type": "ListItem", "position": 2, "name": "Ищу работу", "item": "https://godo.job/workers"},
+        {"@type": "ListItem", "position": 3, "name": "Ищу работника", "item": "https://godo.job/employers"}
+      ]
     }
     </script>
     
@@ -99,13 +188,29 @@
             k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
         })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105259180', 'ym');
 
-        ym(105259180, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+        ym(105259180, 'init', {
+            ssr: true,
+            webvisor: true,
+            clickmap: true,
+            ecommerce: "dataLayer",
+            accurateTrackBounce: true,
+            trackLinks: true,
+            trackHash: true
+        });
     </script>
     <!-- /Yandex.Metrika counter -->
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/105259180" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript>
+      <div><img src="https://mc.yandex.ru/watch/105259180" style="position:absolute; left:-9999px;" alt="" /></div>
+      <div style="padding:40px;text-align:center;font-family:sans-serif;">
+        <h1>GoDo — Работа в Минске</h1>
+        <p>Все вакансии Минска в одном Telegram-канале. Подработка, полная занятость, работа без опыта.</p>
+        <p><a href="https://t.me/go_do_minsk">Подписаться на канал с вакансиями</a></p>
+        <p><a href="https://t.me/go_do_job_bot">Открыть бота GoDo</a></p>
+      </div>
+    </noscript>
   </body>
 </html>

@@ -1,79 +1,89 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { UserPlus, MessageSquare, CheckCircle } from "lucide-react";
+import { Bell, Eye, MousePointerClick, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import SectionShell from "@/components/brand/SectionShell";
+import SmileDivider from "@/components/brand/SmileDivider";
+import { motion } from "framer-motion";
 
 export default function HowItWorks() {
   const steps = [
     {
-      icon: UserPlus,
-      title: "Скажи боту город и навыки",
-      description: "Голосовым сообщением или текстом укажи город и что умеешь или ищешь. Бот задаст уточняющие вопросы для лучшего подбора."
+      icon: Bell,
+      title: "Подпишись на канал",
+      description:
+        "Одно нажатие — и ты в теме. Новые вакансии каждый день прямо в Telegram.",
     },
     {
-      icon: MessageSquare,
-      title: "Получай персонализированные вакансии",
-      description: "Бот пришлёт только те вакансии, которые тебе подходят. Все вакансии собраны в одном канале — больше не нужно искать по разным пабликам."
+      icon: Eye,
+      title: "Смотри свежие вакансии",
+      description:
+        "Мы собираем предложения из разных источников. Никакого мусора — только актуальные вакансии.",
     },
     {
-      icon: CheckCircle,
-      title: "Быстрое трудоустройство",
-      description: "Фокус на быстром найме. Полная или частичная занятость — выбирай что удобно. Начинай работать уже сегодня."
-    }
+      icon: MousePointerClick,
+      title: "Откликайся первым",
+      description:
+        "Лучшие вакансии разбирают за часы. Подписчики канала видят их первыми и получают работу быстрее.",
+    },
   ];
 
   return (
-    <section className="py-24 bg-[#0C0A25] relative overflow-hidden" aria-labelledby="how-it-works-heading">
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4BFF]/20 to-[#3A7BFF]/20"></div>
-      <div className="absolute top-10 left-10 w-36 h-36 bg-[#FF4FC3]/10 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#3A7BFF]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 id="how-it-works-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+    <SectionShell ariaLabelledby="how-it-works-heading">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="text-center mb-14">
+          <h2 id="how-it-works-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3">
             Как это работает
           </h2>
-          <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto">
-            Три простых шага до результата. Никакой бюрократии и лишних действий.
+          <SmileDivider />
+          <p className="text-base sm:text-lg text-white/60 max-w-xl mx-auto mt-4">
+            Три шага — и вакансии сами приходят к тебе.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <Card key={index} className="text-center hover-elevate transition-all duration-300 border-white/10 bg-white/5 backdrop-blur-sm">
-                <CardContent className="p-8">
-                  {/* Icon */}
-                  <div className="flex justify-center mb-6">
-                    <div className="w-16 h-16 bg-[#6B4BFF]/20 rounded-full flex items-center justify-center">
-                      <Icon className="w-8 h-8 text-[#6B4BFF]" />
-                    </div>
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="godo-glass-card p-8 text-center"
+              >
+                <div className="flex justify-center mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-godo-blue/15 flex items-center justify-center ring-1 ring-godo-blue/25">
+                    <Icon className="w-7 h-7 text-godo-blue" />
                   </div>
-
-                  {/* Content */}
-                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-4">
-                    {step.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-white/70 leading-relaxed">
-                    {step.description}
-                  </p>
-                </CardContent>
-              </Card>
+                </div>
+                <span className="inline-block text-xs font-bold text-godo-blue mb-3 tracking-wider">
+                  ШАГ {index + 1}
+                </span>
+                <h3 className="text-lg font-semibold text-white mb-3">{step.title}</h3>
+                <p className="text-sm text-white/60 leading-relaxed">{step.description}</p>
+              </motion.div>
             );
           })}
         </div>
 
-        {/* Arrow indicators between steps on desktop */}
-        <div className="hidden md:flex justify-center items-center mt-12 space-x-8">
-          <div className="flex items-center space-x-4">
-            <div className="w-12 h-0.5 bg-gradient-to-r from-[#6B4BFF] to-[#3A7BFF]" />
-            <div className="w-2 h-2 bg-[#3A7BFF] rounded-full" />
-          </div>
-          <div className="flex items-center space-x-4">
-            <div className="w-12 h-0.5 bg-gradient-to-r from-[#3A7BFF] to-[#FF4FC3]" />
-            <div className="w-2 h-2 bg-[#FF4FC3] rounded-full" />
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-10 text-center"
+        >
+          <p className="text-white/50 text-sm mb-4">Занимает 5 секунд. Отписаться можно в любой момент.</p>
+          <Button
+            className="godo-btn py-3.5 px-8 h-auto text-base group"
+            onClick={() => window.open('https://t.me/go_do_minsk', '_blank')}
+          >
+            <Bell className="w-5 h-5" />
+            Подписаться сейчас
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </motion.div>
       </div>
-    </section>
+    </SectionShell>
   );
 }
