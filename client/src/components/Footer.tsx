@@ -17,22 +17,22 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-3">
               <a
-                href="https://t.me/go_do_minsk"
+                href="https://t.me/goDoMinsk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-godo-blue font-medium hover:text-white transition-colors"
               >
                 <Bell className="w-4 h-4 shrink-0" />
-                Канал с вакансиями — @go_do_minsk
+                Канал с вакансиями — @goDoMinsk
               </a>
               <a
-                href="https://t.me/go_do_job_bot"
+                href="https://t.me/go_do_matcher_bot"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-white/50 hover:text-godo-blue transition-colors"
               >
                 <BotMessageSquare className="w-4 h-4 shrink-0" />
-                Бот — @go_do_job_bot
+                Бот — @go_do_matcher_bot
               </a>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Footer() {
 
         <div className="border-t border-white/[0.06] mt-10 pt-8">
           <p className="text-white/30 text-xs leading-relaxed mb-6 max-w-3xl">
-            GoDo — работа в Минске, вакансии и подработка на сегодня. Свежие вакансии Минска каждый день: грузчики, курьеры, разнорабочие, промоутеры, мастера, работа для студентов. Подработка в Минске без опыта и с опытом. Telegram-канал с вакансиями @go_do_minsk — подпишись бесплатно и откликайся первым. Найти работу в Минске ещё никогда не было так просто.
+            GoDo — работа в Минске, вакансии и подработка на сегодня. Свежие вакансии Минска каждый день: грузчики, курьеры, разнорабочие, промоутеры, мастера, работа для студентов. Подработка в Минске без опыта и с опытом. Telegram-канал с вакансиями @goDoMinsk — подпишись бесплатно и откликайся первым. Найти работу в Минске ещё никогда не было так просто.
           </p>
           <div className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
             <p className="text-white/50 text-sm">

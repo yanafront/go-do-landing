@@ -76,7 +76,7 @@ export default function HowItWorks() {
           <p className="text-white/50 text-sm mb-4">Занимает 5 секунд. Отписаться можно в любой момент.</p>
           <Button
             className="godo-btn py-3.5 px-8 h-auto text-base group"
-            onClick={() => window.open('https://t.me/go_do_minsk', '_blank')}
+            onClick={() => window.open('https://t.me/goDoMinsk', '_blank')}
           >
             <Bell className="w-5 h-5" />
             Подписаться сейчас

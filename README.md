@@ -95,4 +95,4 @@
 
 ## 📞 Контакты
 
-Telegram: [@proxiDBot](https://t.me/go_do_job_bot)
+Telegram: [@go_do_matcher_bot](https://t.me/go_do_matcher_bot)

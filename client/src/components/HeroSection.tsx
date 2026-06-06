@@ -80,7 +80,7 @@ export default function HeroSection() {
               size="lg"
               className="godo-btn py-4 px-8 sm:py-5 sm:px-10 text-base sm:text-lg h-auto group"
               data-testid="button-subscribe-channel"
-              onClick={() => window.open('https://t.me/go_do_minsk', '_blank')}
+              onClick={() => window.open('https://t.me/goDoMinsk', '_blank')}
             >
               <Bell className="w-5 h-5" />
               Подписаться на канал
@@ -90,7 +90,7 @@ export default function HeroSection() {
               size="lg"
               className="godo-btn-outline py-4 px-8 sm:py-5 sm:px-10 text-base sm:text-lg h-auto group"
               data-testid="button-open-bot"
-              onClick={() => window.open('https://t.me/go_do_job_bot', '_blank')}
+              onClick={() => window.open('https://t.me/go_do_matcher_bot', '_blank')}
             >
               <BotMessageSquare className="w-5 h-5" />
               Открыть бота

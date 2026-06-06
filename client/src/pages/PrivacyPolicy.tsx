@@ -112,7 +112,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-xl font-bold text-white mb-3">10. Контакты</h2>
               <p className="text-white/70 text-sm leading-relaxed">
-                По вопросам обработки данных: @go_do_job_bot в Telegram.
+                По вопросам обработки данных: @go_do_matcher_bot в Telegram.
               </p>
             </section>
           </div>

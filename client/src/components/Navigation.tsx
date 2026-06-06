@@ -43,7 +43,7 @@ export default function Navigation() {
               size="sm"
               className="godo-btn px-5 py-2 h-auto min-h-9 text-sm gap-1.5"
               data-testid="button-nav-channel"
-              onClick={() => window.open('https://t.me/go_do_minsk', '_blank')}
+              onClick={() => window.open('https://t.me/goDoMinsk', '_blank')}
             >
               <Bell className="w-3.5 h-3.5" />
               Канал с вакансиями
@@ -130,7 +130,7 @@ export default function Navigation() {
                       className="godo-btn w-full py-4 text-lg h-auto gap-2"
                       data-testid="button-mobile-channel"
                       onClick={() => {
-                        window.open('https://t.me/go_do_minsk', '_blank');
+                        window.open('https://t.me/goDoMinsk', '_blank');
                         setIsMenuOpen(false);
                       }}
                     >
@@ -142,7 +142,7 @@ export default function Navigation() {
                       className="godo-btn-outline w-full py-3 text-base h-auto"
                       data-testid="button-mobile-bot"
                       onClick={() => {
-                        window.open('https://t.me/go_do_job_bot', '_blank');
+                        window.open('https://t.me/go_do_matcher_bot', '_blank');
                         setIsMenuOpen(false);
                       }}
                     >

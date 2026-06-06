@@ -43,10 +43,10 @@ export default function Workers() {
           subtitle="Подпишись на канал — и получай лучшие вакансии Минска прямо в Telegram. Без резюме, без регистрации, без лишних шагов."
           ctaLabel="Подписаться на канал"
           ctaIcon={<Bell className="w-5 h-5" />}
-          onCta={() => window.open('https://t.me/go_do_minsk', '_blank')}
+          onCta={() => window.open('https://t.me/goDoMinsk', '_blank')}
           secondaryCtaLabel="Или открой бота"
           secondaryCtaIcon={<BotMessageSquare className="w-5 h-5" />}
-          onSecondaryCta={() => window.open('https://t.me/go_do_job_bot', '_blank')}
+          onSecondaryCta={() => window.open('https://t.me/go_do_matcher_bot', '_blank')}
           stats={[
             { value: "Ежедневно", label: "новые вакансии" },
             { value: "Всё в 1", label: "канале Telegram" },
@@ -66,7 +66,7 @@ export default function Workers() {
               icon: Bell,
               title: "Подпишись на канал",
               description:
-                "Нажми «Подписаться» в Telegram-канале @go_do_minsk. Вакансии Минска начнут приходить сразу.",
+                "Нажми «Подписаться» в Telegram-канале @goDoMinsk. Вакансии Минска начнут приходить сразу.",
             },
             {
               icon: Eye,

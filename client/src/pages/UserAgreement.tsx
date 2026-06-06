@@ -91,7 +91,7 @@ export default function UserAgreement() {
             <section>
               <h2 className="text-xl font-bold text-white mb-3">8. Контакты</h2>
               <p className="text-white/70 text-sm leading-relaxed">
-                По вопросам обращайтесь через Telegram-бот @go_do_job_bot.
+                По вопросам обращайтесь через Telegram-бот @go_do_matcher_bot.
               </p>
             </section>
           </div>

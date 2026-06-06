@@ -19,7 +19,7 @@ export default function StickyChannelBar() {
     >
       <div className="bg-godo/95 backdrop-blur-xl border-t border-white/[0.08] px-3 py-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))]">
         <button
-          onClick={() => window.open('https://t.me/go_do_minsk', '_blank')}
+          onClick={() => window.open('https://t.me/goDoMinsk', '_blank')}
           className="godo-btn w-full py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-1.5 group"
         >
           <Bell className="w-4 h-4 shrink-0" />

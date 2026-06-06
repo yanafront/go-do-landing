@@ -45,7 +45,7 @@ export default function CTASection() {
               size="lg"
               className="godo-btn py-5 px-10 text-lg h-auto group"
               data-testid="button-cta-channel"
-              onClick={() => window.open('https://t.me/go_do_minsk', '_blank')}
+              onClick={() => window.open('https://t.me/goDoMinsk', '_blank')}
             >
               <Bell className="w-6 h-6 group-hover:rotate-12 transition-transform" />
               Подписаться на канал
@@ -55,7 +55,7 @@ export default function CTASection() {
               size="lg"
               className="godo-btn-outline py-4 px-8 text-base h-auto group"
               data-testid="button-cta-bot"
-              onClick={() => window.open('https://t.me/go_do_job_bot', '_blank')}
+              onClick={() => window.open('https://t.me/go_do_matcher_bot', '_blank')}
             >
               <BotMessageSquare className="w-5 h-5" />
               Или открой бота

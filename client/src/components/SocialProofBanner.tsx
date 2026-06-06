@@ -41,7 +41,7 @@ export default function SocialProofBanner() {
           </div>
           <Button
             className="godo-btn py-4 px-8 text-base h-auto group shrink-0"
-            onClick={() => window.open('https://t.me/go_do_minsk', '_blank')}
+            onClick={() => window.open('https://t.me/goDoMinsk', '_blank')}
           >
             Подписаться
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -34,10 +34,10 @@ export default function Employers() {
           subtitle="Опубликуй вакансию — и её увидят подписчики канала в Минске. Быстрый отклик, живая аудитория, никаких посредников."
           ctaLabel="Разместить вакансию"
           ctaIcon={<Megaphone className="w-5 h-5" />}
-          onCta={() => window.open('https://t.me/go_do_minsk', '_blank')}
+          onCta={() => window.open('https://t.me/goDoMinsk', '_blank')}
           secondaryCtaLabel="Или через бота"
           secondaryCtaIcon={<BotMessageSquare className="w-5 h-5" />}
-          onSecondaryCta={() => window.open('https://t.me/go_do_job_bot', '_blank')}
+          onSecondaryCta={() => window.open('https://t.me/go_do_matcher_bot', '_blank')}
           stats={[
             { value: "2 мин", label: "до публикации" },
             { value: "1000+", label: "подписчиков в Минске" },

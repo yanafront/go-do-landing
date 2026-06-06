@@ -55,7 +55,7 @@ export default function UrgencyStrip() {
           className="text-center"
         >
           <button
-            onClick={() => window.open('https://t.me/go_do_minsk', '_blank')}
+            onClick={() => window.open('https://t.me/goDoMinsk', '_blank')}
             className="inline-flex items-center gap-2 text-godo-blue hover:text-white font-semibold text-sm transition-colors group"
           >
             Смотреть все вакансии в канале
